@@ -1,0 +1,22 @@
+{
+    "type": "file",
+    "mass": 0.0,
+    "friction": 1.0,
+    "modelpath": "assets/models/newiron",
+    "scale": {
+        "x": 0.05,
+        "y": 0.05,
+        "z": 0.05
+    },
+    "rotation": {
+        "yaw": 0.0,
+        "pitch": 0.0,
+        "roll": 0.0
+    },
+    "origin": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "shaderpath": "assets/shaders/shader"
+}
