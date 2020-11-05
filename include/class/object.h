@@ -1,5 +1,6 @@
 #pragma once
 #define GL_GLEXT_PROTOTYPES
+#define GLM_ENABLE_EXPERIMENTAL
 
 #include "GL/gl.h"
 #include <btBulletDynamicsCommon.h>
@@ -8,8 +9,13 @@
 #include <utility>
 #include <map>
 #include <BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h>
+#include <glm/gtc/quaternion.hpp>
+#include <glm/gtx/quaternion.hpp>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 #include <json/json.h>
 
+#include "camera.h"
 #include "shader.h"
 
 struct shapeobject
@@ -24,8 +30,14 @@ struct shapeobject
 
 	void (*update)();
 };
+
+btTransform getTransform(btRigidBody *body);
+btTransform getTransform(btCollisionObject* obj);
+
 btCollisionShape* loadObjectFromVertices(int width, int height, std::vector<btScalar> data, btScalar scale, btScalar min, btScalar max, btVector3 color, int up, bool flip);
 std::vector<btCollisionShape*> loadObjectFromFile(std::string objpath, std::string mtlpath, btVector3 scale);
 void createObjectFromJSON(btDynamicsWorld *dynamicsWorld, std::string path);
 
 void createObject(btDynamicsWorld *dynamicsWorld, std::vector<btCollisionShape*> shape, std::string shaderpath, std::string type, btScalar mass, btVector3 origin, btQuaternion rotation = {0.0f,0.0f,0.0f,1.0f});
+
+void update_object_graphics(btCollisionObject* obj, glm::mat4 projection, glm::mat4 view, bool reset);

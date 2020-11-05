@@ -1,4 +1,5 @@
 #define GL_GLEXT_PROTOTYPES
+#define GLM_ENABLE_EXPERIMENTAL
 #include <SDL2/SDL.h>
 #include <GL/gl.h>
 #include <glm/gtc/quaternion.hpp>
@@ -63,22 +64,6 @@ std::vector<btScalar> boxvertices = {
 	-1.0f, -1.0f,  1.0f,
 	1.0f, -1.0f,  1.0f
 };
-
-btTransform getTransform(btRigidBody *body)
-{
-	return body->getWorldTransform();
-}
-
-btTransform getTransform(btCollisionObject* obj)
-{
-	btRigidBody *body = btRigidBody::upcast(obj);
-	btTransform trans;
-	if (body && body->getMotionState())
-		body->getMotionState()->getWorldTransform(trans);
-	else
-		trans = obj->getWorldTransform();
-	return trans;
-}
 
 int gameloop(int argc, char **argv)
 {
@@ -222,37 +207,7 @@ int gameloop(int argc, char **argv)
 		for (int j = 0; j < dynamicsWorld->getNumCollisionObjects(); j++)
 		{
 			btCollisionObject* obj = dynamicsWorld->getCollisionObjectArray()[j];
-			btTransform trans = getTransform(obj);
-
-			btCollisionShape *shape = obj->getCollisionShape();
-			shapeobject *object = (shapeobject*)shape->getUserPointer();
-			{
-				if (reset)
-					obj->getWorldTransform().setOrigin(object->resettrans.getOrigin());
-				object->shader.use();
-				object->update();
-
-				object->shader.setMat4("projection", projection);
-				object->shader.setMat4("view",view);
-
-				glm::mat4 model = glm::mat4(1.0f);
-				model = glm::scale(model, glm::vec3(shape->getLocalScaling().getX(),
-				 									shape->getLocalScaling().getY(),
-				 									shape->getLocalScaling().getZ()));
-				model = glm::translate(model, glm::vec3(trans.getOrigin().getX() / shape->getLocalScaling().getX(),
-														trans.getOrigin().getY() / shape->getLocalScaling().getY(),
-														trans.getOrigin().getZ() / shape->getLocalScaling().getZ()));
-				model = model * glm::toMat4(glm::quat(trans.getRotation().getW(),
-													trans.getRotation().getX(),
-													trans.getRotation().getY(),
-													trans.getRotation().getZ()));
-				//glm::mat4 model = glm::mat4(1.0f);;
-				//trans.getOpenGLMatrix(&model[0][0]);
-				object->shader.setMat4("model",model);
-
-				glBindVertexArray(object->VAO);
-				glDrawArrays (GL_TRIANGLES, 0, object->vertices.size());
-			}
+			update_object_graphics(obj,projection,view,reset);
 
 			//SDL_Log("world pos object %d = %f,%f,%f", j, float(trans.getOrigin().getX()), float(trans.getOrigin().getY()), float(trans.getOrigin().getZ()));
 		}
