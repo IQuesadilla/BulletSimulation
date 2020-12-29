@@ -3,8 +3,8 @@
 #include <GL/gl.h>
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
-#include <btBulletDynamicsCommon.h>
-#include <btBulletCollisionCommon.h>
+#include <bullet/btBulletDynamicsCommon.h>
+#include <bullet/btBulletCollisionCommon.h>
 //#include <Bullet3OpenCL/BroadphaseCollision/b3GpuGridBroadphase.h>
 
 #include "gameloop.h"
@@ -17,7 +17,7 @@
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 600
 
-#define DO_DEBUG_DRAW btIDebugDraw::DebugDrawModes::DBG_DrawAabb | btIDebugDraw::DebugDrawModes::DBG_DrawWireframe
+//#define DO_DEBUG_DRAW btIDebugDraw::DebugDrawModes::DBG_DrawAabb | btIDebugDraw::DebugDrawModes::DBG_DrawWireframe
 
 std::vector<btScalar> boxvertices = {
 	// positions          
@@ -272,4 +272,10 @@ int gameloop(int argc, char **argv)
 	}
 
 	return 0;
+}
+
+
+int main(int argc, char **argv)
+{
+	return gameloop(argc, argv);
 }

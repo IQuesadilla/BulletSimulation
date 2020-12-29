@@ -2,12 +2,12 @@
 #define GL_GLEXT_PROTOTYPES
 
 #include "GL/gl.h"
-#include <btBulletDynamicsCommon.h>
-#include <btBulletCollisionCommon.h>
+#include <bullet/btBulletDynamicsCommon.h>
+#include <bullet/btBulletCollisionCommon.h>
 #include <tiny_obj_loader.h>
 #include <utility>
 #include <map>
-#include <BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h>
+#include <bullet/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h>
 #include <json/json.h>
 
 #include "shader.h"

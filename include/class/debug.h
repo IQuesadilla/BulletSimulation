@@ -2,7 +2,7 @@
 
 #define GL_GLEXT_PROTOTYPES
 
-#include <LinearMath/btIDebugDraw.h>
+#include <bullet/LinearMath/btIDebugDraw.h>
 #include <GL/gl.h>
 #include <glm/glm.hpp>
 #include <vector>
