@@ -7,12 +7,12 @@
 			<inputlayout>
 				<item value="Position" semantic="POSITION" />
 				<item value="Normal" semantic="NORMAL" />
-				<item value="Texcoord" semantic="TEXCOORD0" />
+				<item value="Color" semantic="TEXCOORD0" />
 			</inputlayout>
 			<rendertexture />
 			<items>
-				<item name="Box" type="geometry">
-					<type>Cube</type>
+				<item name="Circle" type="geometry">
+					<type>Sphere</type>
 					<width>1</width>
 					<height>1</height>
 					<depth>1</depth>
@@ -26,23 +26,33 @@
 				<variable type="float4x4" name="view" system="View" />
 				<variable type="float3" name="lightColor">
 					<row>
+						<value>1</value>
+						<value>0</value>
+						<value>0</value>
+					</row>
+				</variable>
+				<variable type="float3" name="lightPos" function="VectorNormalize">
+					<row>
+						<value>10</value>
 						<value>0</value>
 						<value>0</value>
 						<value>0</value>
 					</row>
 				</variable>
-				<variable type="float3" name="lightPos">
+				<variable type="float3" name="viewPos" system="CameraPosition3" />
+				<variable type="float" name="ambientStrength">
 					<row>
-						<value>0</value>
-						<value>0</value>
-						<value>0</value>
+						<value>0.5</value>
 					</row>
 				</variable>
-				<variable type="float3" name="viewPos">
+				<variable type="float" name="specularPower">
 					<row>
-						<value>0</value>
-						<value>0</value>
-						<value>0</value>
+						<value>10</value>
+					</row>
+				</variable>
+				<variable type="float" name="specularStrength">
+					<row>
+						<value>100000</value>
 					</row>
 				</variable>
 			</variables>
@@ -52,16 +62,15 @@
 	<objects />
 	<cameras />
 	<settings>
-		<entry type="property" name="Box" item="pipe" />
 		<entry type="file" name="shader" shader="vs" />
 		<entry type="file" name="shader" shader="ps" />
-		<entry type="pinned" name="lightColor" owner="shader" />
-		<entry type="pinned" name="lightPos" owner="shader" />
-		<entry type="pinned" name="viewPos" owner="shader" />
+		<entry type="pinned" name="ambientStrength" owner="shader" />
+		<entry type="pinned" name="specularPower" owner="shader" />
+		<entry type="pinned" name="specularStrength" owner="shader" />
 		<entry type="camera" fp="false">
 			<distance>4</distance>
-			<pitch>28</pitch>
-			<yaw>317</yaw>
+			<pitch>-56</pitch>
+			<yaw>183</yaw>
 			<roll>360</roll>
 		</entry>
 		<entry type="clearcolor" r="0" g="0" b="0" a="0" />

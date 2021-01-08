@@ -13,6 +13,7 @@
 #include <memory.h>
 #include <iostream>
 #include <tiny_obj_loader.h>
+#include <json/json.h>
 
 class _shader
 {
@@ -24,6 +25,9 @@ public:
     bool generate(tinyobj::material_t material, std::vector<std::string> layout);
     void use();
     //GLint ID() {return programID;};
+
+	void setJsonValues(Json::Value inshadervalues);
+	void updateJsonValues();
 
     void setBool(const std::string &name, bool value) const;
     void setInt(const std::string &name, int value) const;
@@ -42,6 +46,8 @@ private:
     std::string readFile(std::string path);
     bool compile(std::string vertexsource, std::string fragmentsource);
     bool checkCompileErrors(GLuint shader, std::string type);
+
+	Json::Value shadervalues;
 
 	uint programID;
     bool run;

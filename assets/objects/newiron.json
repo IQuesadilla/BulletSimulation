@@ -18,5 +18,10 @@
         "y": 0.0,
         "z": 0.0
     },
-    "shaderpath": "assets/shaders/shader"
+	"shaderpath": "assets/shaders/shader",
+	"shadervalues": {
+		"ambientStrength": 0.5,
+		"specularPower": 10,
+		"specularStrength": 100000
+	}
 }
