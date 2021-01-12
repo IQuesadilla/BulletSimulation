@@ -9,6 +9,8 @@
 #include <map>
 #include <bullet/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h>
 #include <json/json.h>
+#include <tinyxml2.h>
+#include <fstream>
 
 #include "shader.h"
 
@@ -27,5 +29,6 @@ struct shapeobject
 btCollisionShape* loadObjectFromVertices(int width, int height, std::vector<btScalar> data, btScalar scale, btScalar min, btScalar max, btVector3 color, int up, bool flip);
 std::vector<btCollisionShape*> loadObjectFromFile(std::string objpath, std::string mtlpath, btVector3 scale);
 void createObjectFromJSON(btDynamicsWorld *dynamicsWorld, std::string path);
+void createObjectFromXML(btDynamicsWorld *dynamicsWorld, std::string path);
 
 void createObject(btDynamicsWorld *dynamicsWorld, std::vector<btCollisionShape*> shape, std::string shaderpath, std::string type, btScalar mass, btVector3 origin, btQuaternion rotation = {0.0f,0.0f,0.0f,1.0f});

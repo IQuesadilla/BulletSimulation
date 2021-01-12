@@ -263,9 +263,18 @@ void createObjectFromJSON(btDynamicsWorld *dynamicsWorld, std::string path)
 	glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void*)(6*sizeof(float)));
 	glEnableVertexAttribArray(2);
 
+	//SDL_Log("%s","Here");
+
 	std::string shaderpath = root["shaderpath"].asString();
 	tempshape->shader = *new _shader();
 	tempshape->shader.load(shaderpath+".vs",shaderpath+".fs");
+}
+
+void createObjectFromXML(btDynamicsWorld *dynamicsWorld, std::string path)
+{
+	tinyxml2::XMLDocument doc;
+	doc.LoadFile(path.c_str());
+	std::string xmlpath = doc.FirstChildElement("MODEL")->FirstChildElement("PATH")->GetText();
 }
 
 btCollisionShape *loadObject(btVector3 boxHalfExtents, btVector3 color)

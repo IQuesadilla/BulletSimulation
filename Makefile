@@ -3,19 +3,23 @@ PROJDIR := $(realpath $(CURDIR)/)
 INCLUDEDIR := $(PROJDIR)/include
 SOURCEDIR := $(PROJDIR)/src
 BUILDDIR := $(PROJDIR)/obj
+VCPKGDIR = ./vcpkg/installed/x64-linux/
 
 # Name of the final executable
 TARGET = main
 
 # Decide whether the commands will be shwon or not
-VERBOSE = TRUE
+VERBOSE = 
 
 # Create the list of directories
 DIRS = . class
 LIBS = m stdc++ GL SDL2 tinyobjloader BulletDynamics BulletCollision LinearMath jsoncpp
+IDIRS = . bullet json
+LIBSPATH = -L$(VCPKGDIR)/lib
 SOURCEDIRS = $(foreach dir, $(DIRS), $(addprefix $(SOURCEDIR)/, $(dir)))
 TARGETDIRS = $(foreach dir, $(DIRS), $(addprefix $(BUILDDIR)/, $(dir)))
-INCLUDES = $(foreach dir, $(DIRS), $(addprefix -I$(INCLUDEDIR)/, $(dir))) -I/usr/include/bullet
+INCLUDES = $(foreach dir, $(DIRS), $(addprefix -I$(INCLUDEDIR)/, $(dir)))
+INCLUDES += $(foreach dir, $(IDIRS), $(addprefix -I$(VCPKGDIR)/include/, $(dir)))
 LLIBS = $(foreach dir, $(LIBS), $(addprefix -l, $(dir)))
 
 # Generate the GCC includes parameters by adding -I before each source folder
@@ -74,7 +78,7 @@ all: directories $(TARGET)
 
 $(TARGET): $(OBJS)
 	$(HIDE)echo Linking $@
-	$(HIDE)$(CC) $(OBJS) -o $(TARGET) $(LLIBS)
+	$(HIDE)$(CC) $(OBJS) -o $(TARGET) $(LIBSPATH) $(LLIBS)
 
 # Include dependencies
 -include $(DEPS)

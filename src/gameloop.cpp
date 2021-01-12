@@ -12,7 +12,7 @@
 #include "shader.h"
 #include "object.h"
 #include "debug.h"
-#include "event.h"
+#include "eventhandler.h"
 
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 600
