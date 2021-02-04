@@ -13,7 +13,7 @@ VERBOSE =
 
 # Create the list of directories
 DIRS = . class
-LIBS = m stdc++ GL SDL2 tinyobjloader BulletDynamics BulletCollision LinearMath jsoncpp
+LIBS = m stdc++ GL SDL2 tinyobjloader BulletDynamics BulletCollision LinearMath jsoncpp tinyxml2
 IDIRS = . bullet json
 LIBSPATH = -L$(VCPKGDIR)/lib
 SOURCEDIRS = $(foreach dir, $(DIRS), $(addprefix $(SOURCEDIR)/, $(dir)))

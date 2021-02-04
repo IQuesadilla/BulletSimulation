@@ -1,5 +1,5 @@
-/home/user/code/c++/BulletSimulation/obj/./gameloop.o: \
- /home/user/code/c++/BulletSimulation/src/./gameloop.cpp \
+/home/user/Code/c++/BulletSimulation/obj/./gameloop.o: \
+ /home/user/Code/c++/BulletSimulation/src/./gameloop.cpp \
  vcpkg/installed/x64-linux//include/./bullet/btBulletDynamicsCommon.h \
  vcpkg/installed/x64-linux//include/./bullet/btBulletCollisionCommon.h \
  vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionWorld.h \
@@ -137,9 +137,9 @@
  vcpkg/installed/x64-linux//include/bullet/BulletDynamics/Dynamics/btActionInterface.h \
  vcpkg/installed/x64-linux//include/bullet/BulletDynamics/Dynamics/btRigidBody.h \
  vcpkg/installed/x64-linux//include/./bullet/btBulletCollisionCommon.h \
- /home/user/code/c++/BulletSimulation/include/./gameloop.h \
- /home/user/code/c++/BulletSimulation/include/class/camera.h \
- /home/user/code/c++/BulletSimulation/include/class/shader.h \
+ /home/user/Code/c++/BulletSimulation/include/./gameloop.h \
+ /home/user/Code/c++/BulletSimulation/include/class/camera.h \
+ /home/user/Code/c++/BulletSimulation/include/class/shader.h \
  vcpkg/installed/x64-linux//include/./tiny_obj_loader.h \
  vcpkg/installed/x64-linux//include/./json/json.h \
  vcpkg/installed/x64-linux//include/./json/config.h \
@@ -150,8 +150,10 @@
  vcpkg/installed/x64-linux//include/./json/reader.h \
  vcpkg/installed/x64-linux//include/./json/value.h \
  vcpkg/installed/x64-linux//include/./json/writer.h \
- /home/user/code/c++/BulletSimulation/include/class/object.h \
+ /home/user/Code/c++/BulletSimulation/include/class/object.h \
  vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h \
- /home/user/code/c++/BulletSimulation/include/class/debug.h \
+ vcpkg/installed/x64-linux//include/./tinyxml2.h \
+ /home/user/Code/c++/BulletSimulation/include/class/daeload.h \
+ /home/user/Code/c++/BulletSimulation/include/class/debug.h \
  vcpkg/installed/x64-linux//include/./bullet/LinearMath/btIDebugDraw.h \
- /home/user/code/c++/BulletSimulation/include/class/eventhandler.h
+ /home/user/Code/c++/BulletSimulation/include/class/eventhandler.h

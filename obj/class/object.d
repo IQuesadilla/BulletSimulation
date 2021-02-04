@@ -1,6 +1,6 @@
-/home/user/code/c++/BulletSimulation/obj/class/object.o: \
- /home/user/code/c++/BulletSimulation/src/class/object.cpp \
- /home/user/code/c++/BulletSimulation/include/class/object.h \
+/home/user/Code/c++/BulletSimulation/obj/class/object.o: \
+ /home/user/Code/c++/BulletSimulation/src/class/object.cpp \
+ /home/user/Code/c++/BulletSimulation/include/class/object.h \
  vcpkg/installed/x64-linux//include/./bullet/btBulletDynamicsCommon.h \
  vcpkg/installed/x64-linux//include/./bullet/btBulletCollisionCommon.h \
  vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionWorld.h \
@@ -149,4 +149,6 @@
  vcpkg/installed/x64-linux//include/./json/reader.h \
  vcpkg/installed/x64-linux//include/./json/value.h \
  vcpkg/installed/x64-linux//include/./json/writer.h \
- /home/user/code/c++/BulletSimulation/include/class/shader.h
+ vcpkg/installed/x64-linux//include/./tinyxml2.h \
+ /home/user/Code/c++/BulletSimulation/include/class/shader.h \
+ /home/user/Code/c++/BulletSimulation/include/class/daeload.h

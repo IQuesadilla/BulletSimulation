@@ -115,7 +115,8 @@ int gameloop(int argc, char **argv)
 	//createObject(dynamicsWorld,loadObjectFromFile("assets/objects/colosseum/colosseum.obj","assets/objects/colosseum/",{1.0f,1.0f,1.0f}),"assets/shaders/shader",GROUND,0.0f,{0.0f,0.0f,0.0f});
 	//createObject(dynamicsWorld,loadObjectFromFile("assets/objects/newiron/ironman.obj","assets/objects/newiron/",{0.005f,0.005f,0.005f}),"assets/shaders/shader",PLAYER,200.0f,{2.0f,2.8f,0.0f});
 	//createObject(dynamicsWorld,"assets/objects/ironman/ironman.obj","assets/shaders/shader",PLAYER,{0.02f,0.02f,0.02f},10.0f,{0.0f,20.0f,0.0f});
-	createObjectFromJSON(dynamicsWorld,"assets/objects/newiron.json");
+	//createObjectFromJSON(dynamicsWorld,"assets/objects/newiron.json");
+	createObjectFromXML(dynamicsWorld,"assets/objects/xmliron.xml");
 
 	#ifdef DO_DEBUG_DRAW
 	//{
@@ -153,7 +154,6 @@ int gameloop(int argc, char **argv)
 			while (SDL_PollEvent (&event));
 			camera.InputUpdate(deltaTime);
 		}
-
 		
 		for (int j = 0; j < dynamicsWorld->getNumCollisionObjects(); j++)
 		{
@@ -195,11 +195,11 @@ int gameloop(int argc, char **argv)
 			// 	break;
 			// }
 
-			object->shader.use();
-			//object->shader.setVec3("objectColor", 0.0f, 0.0f, 0.0f);
-			object->shader.setVec3("lightColor",  0.8f, 0.8f, 0.8f);
-			object->shader.setVec3("lightPos",camera.Position);
-			object->shader.setVec3("viewPos",camera.Position);	
+			object->shader->use();
+			object->shader->setVec3("objectColor", 0.0f, 0.0f, 0.5f);
+			object->shader->setVec3("lightColor",  0.0f, 0.0f, 1.0f);
+			object->shader->setVec3("lightPos",camera.Position);
+			object->shader->setVec3("viewPos",camera.Position);	
 		}
 
 		// {
@@ -229,11 +229,11 @@ int gameloop(int argc, char **argv)
 			{
 				if (reset)
 					obj->getWorldTransform().setOrigin(object->resettrans.getOrigin());
-				object->shader.use();
+				object->shader->use();
 				object->update();
 
-				object->shader.setMat4("projection", projection);
-				object->shader.setMat4("view",view);
+				object->shader->setMat4("projection", projection);
+				object->shader->setMat4("view",view);
 
 				glm::mat4 model = glm::mat4(1.0f);
 				model = glm::scale(model, glm::vec3(shape->getLocalScaling().getX(),
@@ -248,7 +248,7 @@ int gameloop(int argc, char **argv)
 													trans.getRotation().getZ()));
 				//glm::mat4 model = glm::mat4(1.0f);;
 				//trans.getOpenGLMatrix(&model[0][0]);
-				object->shader.setMat4("model",model);
+				object->shader->setMat4("model",model);
 
 				glBindVertexArray(object->VAO);
 				glDrawArrays (GL_TRIANGLES, 0, object->vertices.size());

@@ -13,13 +13,14 @@
 #include <fstream>
 
 #include "shader.h"
+#include "daeload.h"
 
 struct shapeobject
 {
 	GLuint VAO;
 	GLuint VBO;
-	std::vector<float> vertices;
-	_shader shader;
+	//std::vector<float> vertices;
+	std::shared_ptr<_shader> shader;
 
 	btTransform resettrans;
 	std::string type;

@@ -7,6 +7,9 @@
 #include <memory>
 #include <iostream>
 #include "tinyxml2.h"
+#include <sstream>
+
+#include "shader.h"
 
 struct Point3D
 {
@@ -33,12 +36,14 @@ public:
     ~daeloader();
 
     void import(std::string path);
+	std::shared_ptr<_shader> getShader();
 
     std::vector<float> indices;
 
 private:
     bool parse(tinyxml2::XMLNode* parent);
 
+	std::shared_ptr<_shader> shaderptr;
     std::vector<Object3D> objects;
 };
 

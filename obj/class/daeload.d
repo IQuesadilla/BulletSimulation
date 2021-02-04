@@ -1,5 +1,7 @@
-/home/user/Code/c++/BulletSimulation/obj/class/shader.o: \
- /home/user/Code/c++/BulletSimulation/src/class/shader.cpp \
+/home/user/Code/c++/BulletSimulation/obj/class/daeload.o: \
+ /home/user/Code/c++/BulletSimulation/src/class/daeload.cpp \
+ /home/user/Code/c++/BulletSimulation/include/class/daeload.h \
+ vcpkg/installed/x64-linux//include/./tinyxml2.h \
  /home/user/Code/c++/BulletSimulation/include/class/shader.h \
  vcpkg/installed/x64-linux//include/./tiny_obj_loader.h \
  vcpkg/installed/x64-linux//include/./json/json.h \

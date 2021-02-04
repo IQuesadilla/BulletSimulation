@@ -204,6 +204,7 @@ void createObjectFromJSON(btDynamicsWorld *dynamicsWorld, std::string path)
 		shape = new btConvexTriangleMeshShape(mesh,true);
 
 		tempshape->vertices = graphicsvertices;
+		std::cout << "SIZE: " << graphicsvertices.size() << std::endl;
 	}
 	else if (type == "box")
 	{
@@ -266,8 +267,8 @@ void createObjectFromJSON(btDynamicsWorld *dynamicsWorld, std::string path)
 	//SDL_Log("%s","Here");
 
 	std::string shaderpath = root["shaderpath"].asString();
-	tempshape->shader = *new _shader();
-	tempshape->shader.load(shaderpath+".vs",shaderpath+".fs");
+	tempshape->shader; tempshape->shader.reset(new _shader());
+	tempshape->shader->load(shaderpath+".vs",shaderpath+".fs");
 }
 
 void createObjectFromXML(btDynamicsWorld *dynamicsWorld, std::string path)
@@ -275,7 +276,79 @@ void createObjectFromXML(btDynamicsWorld *dynamicsWorld, std::string path)
 	tinyxml2::XMLDocument doc;
 	doc.LoadFile(path.c_str());
 	std::string xmlpath = doc.FirstChildElement("MODEL")->FirstChildElement("PATH")->GetText();
-}
+	daeloader dae;
+	dae.import(xmlpath);
+	
+	shapeobject *tempshape = new shapeobject;
+	btCollisionShape* shape;
+
+	btTriangleMesh *mesh = new btTriangleMesh();
+	for (int j = 0; j < dae.indices.size()/TVC; j+=3)
+			mesh->addTriangle(	btVector3(dae.indices[0+(j*TVC)],dae.indices[1+(j*TVC)],dae.indices[2+(j*TVC)]),
+								btVector3(dae.indices[3+(j*TVC)],dae.indices[4+(j*TVC)],dae.indices[5+(j*TVC)]),
+								btVector3(dae.indices[6+(j*TVC)],dae.indices[7+(j*TVC)],dae.indices[8+(j*TVC)]));
+
+	shape = new btConvexTriangleMeshShape(mesh,true);
+
+	tempshape->vertices = dae.indices;
+
+	shape->setUserPointer(tempshape);
+
+//	if (root.isMember("scale")) shape->setLocalScaling(btVector3(	root["scale"].get("x",1.0f).asFloat(),
+//																	root["scale"].get("y",1.0f).asFloat(),
+//																	root["scale"].get("z",1.0f).asFloat()));
+
+	btTransform trans;
+	trans.setIdentity();
+//	trans.setRotation(btQuaternion(	root["rotation"].get("yaw",0.0f).asFloat(),
+//									root["rotation"].get("pitch",0.0f).asFloat(),
+//									root["rotation"].get("roll",0.0f).asFloat()));
+//	trans.setOrigin(btVector3(	root["origin"].get("x",0.0f).asFloat(),
+//								root["origin"].get("y",0.0f).asFloat(),
+//								root["origin"].get("z",0.0f).asFloat()));
+
+	tempshape->resettrans = trans;
+	tempshape->update = dupdate;
+
+	btScalar mass = 0.0f;//root.get("mass",1.0f).asFloat();
+	btVector3 inertia;
+	shape->calculateLocalInertia(mass,inertia);
+
+	btDefaultMotionState *motionState = new btDefaultMotionState(trans);
+	btRigidBody::btRigidBodyConstructionInfo rbInfo(mass,motionState,shape,inertia);
+	btRigidBody *body = new btRigidBody(rbInfo);
+
+//	if (root.isMember("friction")) body->setFriction(root["friction"].asFloat());
+//	if (root.isMember("gravity")) body->setGravity(btVector3(	root["gravity"]["x"].asFloat(),
+//																root["gravity"]["y"].asFloat(),
+//																root["gravity"]["z"].asFloat()));
+
+
+	dynamicsWorld->addRigidBody(body);
+	dynamicsWorld->updateSingleAabb(body);
+
+	glGenVertexArrays(1, &tempshape->VAO);
+	glGenBuffers(1, &tempshape->VBO);
+
+	glBindVertexArray(tempshape->VAO);
+
+	glBindBuffer(GL_ARRAY_BUFFER, tempshape->VBO);
+	glBufferData(GL_ARRAY_BUFFER, tempshape->vertices.size()*sizeof(float), tempshape->vertices.data(), GL_STATIC_DRAW);
+		
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	glEnableVertexAttribArray(0);
+
+	//glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void*)(3*sizeof(float)));
+	//glEnableVertexAttribArray(1);
+
+	//glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void*)(6*sizeof(float)));
+	//glEnableVertexAttribArray(2);
+
+	//SDL_Log("%s","Here");
+
+	std::string shaderpath = doc.FirstChildElement("SHADER")->FirstChildElement("PATH")->GetText();
+	tempshape->shader; tempshape->shader.reset(new _shader());
+	tempshape->shader->load(shaderpath+".vs",shaderpath+".fs");}
 
 btCollisionShape *loadObject(btVector3 boxHalfExtents, btVector3 color)
 {
@@ -329,8 +402,8 @@ void createObject(btDynamicsWorld *dynamicsWorld, std::vector<btCollisionShape*>
 		glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void*)(6*sizeof(float)));
 		glEnableVertexAttribArray(2);
 
-		tempshape->shader = *new _shader();
-		tempshape->shader.load(shaderpath+".vs",shaderpath+".fs");
+		tempshape->shader; tempshape->shader.reset(new _shader());
+		tempshape->shader->load(shaderpath+".vs",shaderpath+".fs");
 	}
 
 	return;
