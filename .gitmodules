@@ -7,3 +7,6 @@
 [submodule "class/shader"]
 	path = class/shader
 	url = ""
+[submodule "class/sdlwrapper"]
+	path = class/sdlwrapper
+	url = ""
