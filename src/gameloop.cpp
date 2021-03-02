@@ -10,6 +10,9 @@
 #include "gameloop.h"
 #include "camera/camera.h"
 #include "shader/shader.h"
+#include "sdlwrapper/window.h"
+#include "sdlwrapper/glcontext.h"
+#include "sdlwrapper/event.h"
 #include "object.h"
 #include "debug.h"
 #include "eventhandler.h"
@@ -86,8 +89,8 @@ int gameloop(int argc, char **argv)
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
-	SDL_Window *window = SDL_CreateWindow("win",SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_OPENGL|SDL_WINDOW_RESIZABLE);
-	SDL_GLContext glcontext = SDL_GL_CreateContext(window);
+	window _window ("win", WINDOWPOS_UNDEFINED, {WINDOW_WIDTH, WINDOW_HEIGHT}, SDL_WINDOW_OPENGL|SDL_WINDOW_RESIZABLE);
+	glcontext _glcontext (_window);
 	glViewport (0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LESS);
@@ -98,9 +101,15 @@ int gameloop(int argc, char **argv)
 	Camera camera(glm::vec3(0.0f,30.0f,5.0f));
 	camera.setViewSize(WINDOW_WIDTH,WINDOW_HEIGHT);
 
-	_event Event;
-	Event.data.camera = &camera;
-	SDL_AddEventWatch(event_callback,&Event);
+	//_event Event;
+	//Event.data.camera = &camera;
+	//SDL_AddEventWatch(event_callback,&Event);
+
+	event _event;
+	eventdata _eventdata;
+	_event.addCallback(SDL_KEYDOWN,keyboard_callback,&_eventdata);
+	_event.addCallback(SDL_KEYUP,keyboard_callback,&_eventdata);
+	_event.addCallback(SDL_MOUSEMOTION,mouse_callback,&_eventdata);
 
 	btDefaultCollisionConfiguration *collisionConfiguration = new btDefaultCollisionConfiguration();
 	btCollisionDispatcher *dispatcher = new btCollisionDispatcher(collisionConfiguration);
