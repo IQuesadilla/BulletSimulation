@@ -359,7 +359,7 @@ btCollisionShape *loadObject(btVector3 boxHalfExtents, btVector3 color)
 	return shape;
 }
 
-void createObject(btDynamicsWorld *dynamicsWorld, std::vector<btCollisionShape*> shapevector, std::string shaderpath, std::string type, btScalar mass, btVector3 origin, btQuaternion rotation)
+void createObject(btDynamicsWorld *dynamicsWorld, std::vector<btCollisionShape*> shapevector, std::vector<Point3D> vertices, std::string shaderpath, std::string type, btScalar mass, btVector3 origin, btQuaternion rotation)
 {
 	for (auto& shape : shapevector)
 	{
@@ -394,7 +394,7 @@ void createObject(btDynamicsWorld *dynamicsWorld, std::vector<btCollisionShape*>
 		glBindVertexArray(tempshape->VAO);
 
 		glBindBuffer(GL_ARRAY_BUFFER, tempshape->VBO);
-		glBufferData(GL_ARRAY_BUFFER, tempshape->vertexcount*sizeof(float), tempshape->vertices.data(), GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, tempshape->vertexcount*sizeof(float), vertices.data(), GL_STATIC_DRAW);
 		
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void*)0);
 		glEnableVertexAttribArray(0);

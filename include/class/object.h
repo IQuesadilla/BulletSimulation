@@ -33,4 +33,4 @@ std::vector<btCollisionShape*> loadObjectFromFile(std::string objpath, std::stri
 void createObjectFromJSON(btDynamicsWorld *dynamicsWorld, std::string path);
 void createObjectFromXML(btDynamicsWorld *dynamicsWorld, std::string path);
 
-void createObject(btDynamicsWorld *dynamicsWorld, std::vector<btCollisionShape*> shape, std::string shaderpath, std::string type, btScalar mass, btVector3 origin, btQuaternion rotation = {0.0f,0.0f,0.0f,1.0f});
+void createObject(btDynamicsWorld *dynamicsWorld, std::vector<btCollisionShape*> shapevector, std::vector<Point3D> vertices, std::string shaderpath, std::string type, btScalar mass, btVector3 origin, btQuaternion rotation = {0.0f,0.0f,0.0f,1.0f});
