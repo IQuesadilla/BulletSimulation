@@ -10,3 +10,6 @@
 [submodule "class/sdlwrapper"]
 	path = class/sdlwrapper
 	url = ""
+[submodule "class/datatypes"]
+	path = class/datatypes
+	url = ""

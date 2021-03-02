@@ -118,7 +118,7 @@ std::vector<btCollisionShape*> loadObjectFromFile(std::string objpath, std::stri
 		shapeobject *tempshape = new shapeobject;
 		shape->setUserIndex(true);
 		shape->setUserPointer(tempshape);
-		tempshape->vertices = x;
+		tempshape->vertexcount = x.size();
 		shapevector.push_back(shape);
 		std::cout << x.size() << std::endl;
 	}
@@ -127,7 +127,7 @@ std::vector<btCollisionShape*> loadObjectFromFile(std::string objpath, std::stri
 }
 
 btCollisionShape* loadObjectHeightfield(int width, int height, std::vector<btScalar> data, btScalar scale, btScalar min, btScalar max, btVector3 color, int up, bool flip)
-{
+{/*
 	btHeightfieldTerrainShape *shape = new btHeightfieldTerrainShape(width,height,data.data(),scale,min,max,up,PHY_FLOAT,flip);
 	//btTriangleInfoMap *map = shape->getTriangleInfoMap(); shape->setTriangleInfoMap();
 	//btTriangleMeshShape *mesh = shape;
@@ -174,7 +174,7 @@ btCollisionShape* loadObjectHeightfield(int width, int height, std::vector<btSca
 	std::vector<btCollisionShape*> shapevector;
 	shapevector.push_back(shape);
 	return shape;
-}
+*/}
 
 void dupdate(){};
 void createObjectFromJSON(btDynamicsWorld *dynamicsWorld, std::string path)
@@ -187,12 +187,14 @@ void createObjectFromJSON(btDynamicsWorld *dynamicsWorld, std::string path)
 	shapeobject *tempshape = new shapeobject;
 	btCollisionShape* shape;
 
+	std::vector<btScalar> graphicsvertices;
+
 	std::string type = root["type"].asString();
 
 	if (type == "file")
 	{
 		std::string modelpath = root["modelpath"].asString();
-		std::vector<btScalar> graphicsvertices = loadObjFile(modelpath+"/model.obj",modelpath);
+		graphicsvertices = loadObjFile(modelpath+"/model.obj",modelpath);
 		std::vector<btScalar> bodyvertices = loadObjFile(modelpath+"/body.obj","");
 
 		btTriangleMesh *mesh = new btTriangleMesh();
@@ -203,7 +205,7 @@ void createObjectFromJSON(btDynamicsWorld *dynamicsWorld, std::string path)
 
 		shape = new btConvexTriangleMeshShape(mesh,true);
 
-		tempshape->vertices = graphicsvertices;
+		tempshape->vertexcount = graphicsvertices.size();
 		std::cout << "SIZE: " << graphicsvertices.size() << std::endl;
 	}
 	else if (type == "box")
@@ -253,7 +255,7 @@ void createObjectFromJSON(btDynamicsWorld *dynamicsWorld, std::string path)
 	glBindVertexArray(tempshape->VAO);
 
 	glBindBuffer(GL_ARRAY_BUFFER, tempshape->VBO);
-	glBufferData(GL_ARRAY_BUFFER, tempshape->vertices.size()*sizeof(float), tempshape->vertices.data(), GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, graphicsvertices.size()*sizeof(float), graphicsvertices.data(), GL_STATIC_DRAW);
 		
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
@@ -290,7 +292,8 @@ void createObjectFromXML(btDynamicsWorld *dynamicsWorld, std::string path)
 
 	shape = new btConvexTriangleMeshShape(mesh,true);
 
-	tempshape->vertices = dae.indices;
+	//tempshape->vertices = dae.indices;
+	tempshape->vertexcount = dae.indices.size();
 
 	shape->setUserPointer(tempshape);
 
@@ -333,7 +336,7 @@ void createObjectFromXML(btDynamicsWorld *dynamicsWorld, std::string path)
 	glBindVertexArray(tempshape->VAO);
 
 	glBindBuffer(GL_ARRAY_BUFFER, tempshape->VBO);
-	glBufferData(GL_ARRAY_BUFFER, tempshape->vertices.size()*sizeof(float), tempshape->vertices.data(), GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, dae.indices.size()*sizeof(float), dae.indices.data(), GL_STATIC_DRAW);
 		
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
@@ -391,7 +394,7 @@ void createObject(btDynamicsWorld *dynamicsWorld, std::vector<btCollisionShape*>
 		glBindVertexArray(tempshape->VAO);
 
 		glBindBuffer(GL_ARRAY_BUFFER, tempshape->VBO);
-		glBufferData(GL_ARRAY_BUFFER, tempshape->vertices.size()*sizeof(float), tempshape->vertices.data(), GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, tempshape->vertexcount*sizeof(float), tempshape->vertices.data(), GL_STATIC_DRAW);
 		
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void*)0);
 		glEnableVertexAttribArray(0);

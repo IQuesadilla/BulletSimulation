@@ -8,8 +8,8 @@
 //#include <Bullet3OpenCL/BroadphaseCollision/b3GpuGridBroadphase.h>
 
 #include "gameloop.h"
-#include "camera.h"
-#include "shader.h"
+#include "camera/camera.h"
+#include "shader/shader.h"
 #include "object.h"
 #include "debug.h"
 #include "eventhandler.h"
@@ -251,7 +251,7 @@ int gameloop(int argc, char **argv)
 				object->shader->setMat4("model",model);
 
 				glBindVertexArray(object->VAO);
-				glDrawArrays (GL_TRIANGLES, 0, object->vertices.size());
+				glDrawArrays (GL_TRIANGLES, 0, object->vertexcount);
 			}
 
 			//SDL_Log("world pos object %d = %f,%f,%f", j, float(trans.getOrigin().getX()), float(trans.getOrigin().getY()), float(trans.getOrigin().getZ()));

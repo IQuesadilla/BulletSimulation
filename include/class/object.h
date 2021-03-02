@@ -12,14 +12,15 @@
 #include <tinyxml2.h>
 #include <fstream>
 
-#include "shader.h"
-#include "daeload.h"
+#include "shader/shader.h"
+#include "daeload/daeload.h"
 
 struct shapeobject
 {
 	GLuint VAO;
 	GLuint VBO;
 	//std::vector<float> vertices;
+	int vertexcount;
 	std::shared_ptr<_shader> shader;
 
 	btTransform resettrans;
