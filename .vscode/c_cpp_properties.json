@@ -5,11 +5,13 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/vcpkg/installed/x64-linux/include",
+				"${workspaceFolder}/vcpkg/installed/x64-linux/include/bullet",
+				"${workspaceFolder}/vcpkg/installed/x64-linux/include/glm",
                 "/usr/include/SDL2"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
-            "cStandard": "gnu17",
+            "cStandard": "gnu18",
             "cppStandard": "gnu++14",
             "intelliSenseMode": "gcc-x64"
         }

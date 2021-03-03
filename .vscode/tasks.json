@@ -1,0 +1,41 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "C/C++: g++ build project",
+			"type": "process",
+			"command": "/usr/bin/g++",
+			"args": [
+				"-g","${workspaceFolder}/src/*.cpp",
+				"-g","${workspaceFolder}/src/class/*.cpp",
+				"-g","${workspaceFolder}/class/*/*.cpp",
+				"-o","main",
+				"-I","${workspaceFolder}/include",
+				"-I","${workspaceFolder}/include/class",
+				"-I","${workspaceFolder}/class/*",
+				"-lstdc++",
+				"-lm",
+				"-lSDL2",
+				"-lGL",
+				"-ltinyobjloader",
+				"-lBulletDynamics",
+				"-lBulletCollision",
+				"-lLinearMath",
+				"-ljsoncpp",
+				"-ltinyxml2"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
