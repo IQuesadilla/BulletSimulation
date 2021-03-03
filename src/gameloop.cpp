@@ -83,7 +83,7 @@ btTransform getTransform(btCollisionObject* obj)
 	return trans;
 }
 
-int gameloop(int argc, char **argv)
+int gameloop()
 {
 	SDL_Init(SDL_INIT_EVERYTHING);
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
@@ -139,9 +139,11 @@ int gameloop(int argc, char **argv)
 	float deltaTime, lastFrame;
 	bool reset = false;
 	int fps, lastsec, fc;
-	while (!Event.data.quit)
+	while (!_eventdata.quit)
 	{
 		dynamicsWorld->stepSimulation(1.0f / 60.0f, 10, 1.0f / 60.0f);
+
+		_event.updateCallbacks();
 
 		glClearColor (0.2f,0.2f,0.2f,1.0f);
 		glClear (GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
@@ -159,8 +161,6 @@ int gameloop(int argc, char **argv)
 			}
 			fc++;
 
-			SDL_Event event;
-			while (SDL_PollEvent (&event));
 			camera.InputUpdate(deltaTime);
 		}
 		
@@ -277,14 +277,8 @@ int gameloop(int argc, char **argv)
 		#endif
 
 		if (reset) reset = false;
-		SDL_GL_SwapWindow(window);
+		_glcontext.update();
 	}
 
 	return 0;
-}
-
-
-int main(int argc, char **argv)
-{
-	return gameloop(argc, argv);
 }

@@ -24,21 +24,4 @@ void quit_callback(SDL_Event,arg _arg);
 
 int event_callback(void *userdata, SDL_Event *event);
 
-class _event
-{
-public:
-    _event();
-    ~_event();
-
-    void keyboard_update(SDL_Keycode event, bool down);
-    void click_update(Uint8 event, bool down);
-    void mouse_update(SDL_MouseMotionEvent event);
-    void window_update(SDL_WindowEvent event);
-    void quit_update();
-
-//private:
-    void update(SDL_Event *event);
-
-};
-
 #endif
