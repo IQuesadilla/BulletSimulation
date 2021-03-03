@@ -13,3 +13,5 @@
 [submodule "class/datatypes"]
 	path = class/datatypes
 	url = https://github.com/IQuesadilla/datatypes.git
+[submodule "vcpkg"]
+	url = https://github.com/microsoft/vcpkg.git

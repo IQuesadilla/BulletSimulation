@@ -207,9 +207,7 @@ int gameloop(int argc, char **argv)
 		for (int j = 0; j < dynamicsWorld->getNumCollisionObjects(); j++)
 		{
 			btCollisionObject* obj = dynamicsWorld->getCollisionObjectArray()[j];
-<<<<<<< HEAD
 			update_object_graphics(obj,projection,view,reset);
-=======
 			btTransform trans = getTransform(obj);
 
 			btCollisionShape *shape = obj->getCollisionShape();
@@ -241,7 +239,6 @@ int gameloop(int argc, char **argv)
 				glBindVertexArray(object->VAO);
 				glDrawArrays (GL_TRIANGLES, 0, object->vertexcount);
 			}
->>>>>>> 0d4b352ebb84f23dcc806247364096017a90f18e
 
 			//SDL_Log("world pos object %d = %f,%f,%f", j, float(trans.getOrigin().getX()), float(trans.getOrigin().getY()), float(trans.getOrigin().getZ()));
 		}
