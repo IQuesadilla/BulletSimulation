@@ -1,5 +1,6 @@
 #pragma once
 #define GL_GLEXT_PROTOTYPES
+#define GLM_ENABLE_EXPERIMENTAL
 
 #include "GL/gl.h"
 #include <bullet/btBulletDynamicsCommon.h>
@@ -28,9 +29,15 @@ struct shapeobject
 
 	void (*update)();
 };
+
+btTransform getTransform(btRigidBody *body);
+btTransform getTransform(btCollisionObject* obj);
+
 btCollisionShape* loadObjectFromVertices(int width, int height, std::vector<btScalar> data, btScalar scale, btScalar min, btScalar max, btVector3 color, int up, bool flip);
 std::vector<btCollisionShape*> loadObjectFromFile(std::string objpath, std::string mtlpath, btVector3 scale);
 void createObjectFromJSON(btDynamicsWorld *dynamicsWorld, std::string path);
 void createObjectFromXML(btDynamicsWorld *dynamicsWorld, std::string path);
 
 void createObject(btDynamicsWorld *dynamicsWorld, std::vector<btCollisionShape*> shapevector, std::vector<Point3D> vertices, std::string shaderpath, std::string type, btScalar mass, btVector3 origin, btQuaternion rotation = {0.0f,0.0f,0.0f,1.0f});
+
+void update_object_graphics(btCollisionObject* obj, glm::mat4 projection, glm::mat4 view, bool reset);

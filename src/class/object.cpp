@@ -9,6 +9,22 @@
 // 		vertices
 // }
 
+btTransform getTransform(btRigidBody *body)
+{
+	return body->getWorldTransform();
+}
+
+btTransform getTransform(btCollisionObject* obj)
+{
+	btRigidBody *body = btRigidBody::upcast(obj);
+	btTransform trans;
+	if (body && body->getMotionState())
+		body->getMotionState()->getWorldTransform(trans);
+	else
+		trans = obj->getWorldTransform();
+	return trans;
+}
+
 class tricallback : public btTriangleCallback
 {
 public:
@@ -29,7 +45,7 @@ template<typename K, typename V>
 void print_map(std::map<K,V> const &m)
 {
     for (auto const& pair: m) {
-        std::cout << "{" << pair.first << ": " << pair.second << "}\n";
+        std::cout << "{" << pair.first << ":" << pair.second << "}\n";
     }
 }
 
@@ -410,4 +426,39 @@ void createObject(btDynamicsWorld *dynamicsWorld, std::vector<btCollisionShape*>
 	}
 
 	return;
+}
+
+void update_object_graphics(btCollisionObject* obj, glm::mat4 projection, glm::mat4 view, bool reset)
+{
+	btTransform trans = getTransform(obj);
+
+	btCollisionShape *shape = obj->getCollisionShape();
+	shapeobject *object = (shapeobject*)shape->getUserPointer();
+	{
+		if (reset)
+			obj->getWorldTransform().setOrigin(object->resettrans.getOrigin());
+		object->shader.use();
+		object->update();
+
+		object->shader.setMat4("projection", projection);
+		object->shader.setMat4("view",view);
+
+		glm::mat4 model = glm::mat4(1.0f);
+		model = glm::scale(model, glm::vec3(shape->getLocalScaling().getX(),
+											shape->getLocalScaling().getY(),
+											shape->getLocalScaling().getZ()));
+		model = glm::translate(model, glm::vec3(trans.getOrigin().getX() / shape->getLocalScaling().getX(),
+												trans.getOrigin().getY() / shape->getLocalScaling().getY(),
+												trans.getOrigin().getZ() / shape->getLocalScaling().getZ()));
+		model = model * glm::toMat4(glm::quat(trans.getRotation().getW(),
+											trans.getRotation().getX(),
+											trans.getRotation().getY(),
+											trans.getRotation().getZ()));
+		//glm::mat4 model = glm::mat4(1.0f);;
+		//trans.getOpenGLMatrix(&model[0][0]);
+		object->shader.setMat4("model",model);
+
+		glBindVertexArray(object->VAO);
+		glDrawArrays (GL_TRIANGLES, 0, object->vertices.size());
+	}
 }

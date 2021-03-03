@@ -1,4 +1,5 @@
 #define GL_GLEXT_PROTOTYPES
+#define GLM_ENABLE_EXPERIMENTAL
 #include <SDL2/SDL.h>
 #include <GL/gl.h>
 #include <glm/gtc/quaternion.hpp>
@@ -231,6 +232,7 @@ int gameloop()
 		for (int j = 0; j < dynamicsWorld->getNumCollisionObjects(); j++)
 		{
 			btCollisionObject* obj = dynamicsWorld->getCollisionObjectArray()[j];
+			update_object_graphics(obj,projection,view,reset);
 			btTransform trans = getTransform(obj);
 
 			btCollisionShape *shape = obj->getCollisionShape();
