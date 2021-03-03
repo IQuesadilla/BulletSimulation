@@ -8,28 +8,20 @@
 #include <tiny_obj_loader.h>
 #include <utility>
 #include <map>
-<<<<<<< HEAD
-#include <BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h>
-#include <glm/gtc/quaternion.hpp>
-#include <glm/gtx/quaternion.hpp>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-=======
 #include <bullet/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h>
->>>>>>> 0d4b352ebb84f23dcc806247364096017a90f18e
 #include <json/json.h>
 #include <tinyxml2.h>
 #include <fstream>
 
-#include "camera.h"
-#include "shader.h"
-#include "daeload.h"
+#include "shader/shader.h"
+#include "daeload/daeload.h"
 
 struct shapeobject
 {
 	GLuint VAO;
 	GLuint VBO;
 	//std::vector<float> vertices;
+	int vertexcount;
 	std::shared_ptr<_shader> shader;
 
 	btTransform resettrans;
@@ -46,6 +38,6 @@ std::vector<btCollisionShape*> loadObjectFromFile(std::string objpath, std::stri
 void createObjectFromJSON(btDynamicsWorld *dynamicsWorld, std::string path);
 void createObjectFromXML(btDynamicsWorld *dynamicsWorld, std::string path);
 
-void createObject(btDynamicsWorld *dynamicsWorld, std::vector<btCollisionShape*> shape, std::string shaderpath, std::string type, btScalar mass, btVector3 origin, btQuaternion rotation = {0.0f,0.0f,0.0f,1.0f});
+void createObject(btDynamicsWorld *dynamicsWorld, std::vector<btCollisionShape*> shapevector, std::vector<Point3D> vertices, std::string shaderpath, std::string type, btScalar mass, btVector3 origin, btQuaternion rotation = {0.0f,0.0f,0.0f,1.0f});
 
 void update_object_graphics(btCollisionObject* obj, glm::mat4 projection, glm::mat4 view, bool reset);

@@ -1,0 +1,15 @@
+[submodule "class/daeload"]
+	path = class/daeload
+	url = ""
+[submodule "class/camera"]
+	path = class/camera
+	url = ""
+[submodule "class/shader"]
+	path = class/shader
+	url = ""
+[submodule "class/sdlwrapper"]
+	path = class/sdlwrapper
+	url = ""
+[submodule "class/datatypes"]
+	path = class/datatypes
+	url = ""
