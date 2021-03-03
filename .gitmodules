@@ -1,15 +1,15 @@
 [submodule "class/daeload"]
 	path = class/daeload
-	url = ""
+	url = https://github.com/IQuesadilla/daeload.git
 [submodule "class/camera"]
 	path = class/camera
-	url = ""
+	url = https://github.com/IQuesadilla/camera.git
 [submodule "class/shader"]
 	path = class/shader
-	url = ""
+	url = https://github.com/IQuesadilla/shader.git
 [submodule "class/sdlwrapper"]
 	path = class/sdlwrapper
-	url = ""
+	url = https://github.com/IQuesadilla/sdlwrapper.git
 [submodule "class/datatypes"]
 	path = class/datatypes
-	url = ""
+	url = https://github.com/IQuesadilla/datatypes.git
