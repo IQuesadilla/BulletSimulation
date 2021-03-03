@@ -48,6 +48,16 @@ void _shader::use()
     if (run) glUseProgram (programID);
 }
 
+void _shader::setJsonValues(Json::Value inshadervalues)
+{
+	shadervalues = inshadervalues;
+}
+
+void _shader::updateJsonValues()
+{
+	shadervalues.getMemberNames();
+}
+
 void _shader::setBool(const std::string &name, bool value) const
 {
     glUniform1i(glGetUniformLocation(programID, name.c_str()), (int)value);

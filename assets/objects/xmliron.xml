@@ -1,0 +1,7 @@
+<MODEL>
+	<PATH>assets/models/xmliron/model.dae</PATH>
+</MODEL>
+
+<SHADER>
+	<PATH>assets/shaders/vonly</PATH>
+</SHADER>

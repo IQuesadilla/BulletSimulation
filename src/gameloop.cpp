@@ -4,8 +4,8 @@
 #include <GL/gl.h>
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
-#include <btBulletDynamicsCommon.h>
-#include <btBulletCollisionCommon.h>
+#include <bullet/btBulletDynamicsCommon.h>
+#include <bullet/btBulletCollisionCommon.h>
 //#include <Bullet3OpenCL/BroadphaseCollision/b3GpuGridBroadphase.h>
 
 #include "gameloop.h"
@@ -13,12 +13,12 @@
 #include "shader.h"
 #include "object.h"
 #include "debug.h"
-#include "event.h"
+#include "eventhandler.h"
 
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 600
 
-#define DO_DEBUG_DRAW btIDebugDraw::DebugDrawModes::DBG_DrawAabb | btIDebugDraw::DebugDrawModes::DBG_DrawWireframe
+//#define DO_DEBUG_DRAW btIDebugDraw::DebugDrawModes::DBG_DrawAabb | btIDebugDraw::DebugDrawModes::DBG_DrawWireframe
 
 std::vector<btScalar> boxvertices = {
 	// positions          
@@ -100,7 +100,8 @@ int gameloop(int argc, char **argv)
 	//createObject(dynamicsWorld,loadObjectFromFile("assets/objects/colosseum/colosseum.obj","assets/objects/colosseum/",{1.0f,1.0f,1.0f}),"assets/shaders/shader",GROUND,0.0f,{0.0f,0.0f,0.0f});
 	//createObject(dynamicsWorld,loadObjectFromFile("assets/objects/newiron/ironman.obj","assets/objects/newiron/",{0.005f,0.005f,0.005f}),"assets/shaders/shader",PLAYER,200.0f,{2.0f,2.8f,0.0f});
 	//createObject(dynamicsWorld,"assets/objects/ironman/ironman.obj","assets/shaders/shader",PLAYER,{0.02f,0.02f,0.02f},10.0f,{0.0f,20.0f,0.0f});
-	createObjectFromJSON(dynamicsWorld,"assets/objects/newiron.json");
+	//createObjectFromJSON(dynamicsWorld,"assets/objects/newiron.json");
+	createObjectFromXML(dynamicsWorld,"assets/objects/xmliron.xml");
 
 	#ifdef DO_DEBUG_DRAW
 	//{
@@ -138,7 +139,6 @@ int gameloop(int argc, char **argv)
 			while (SDL_PollEvent (&event));
 			camera.InputUpdate(deltaTime);
 		}
-
 		
 		for (int j = 0; j < dynamicsWorld->getNumCollisionObjects(); j++)
 		{
@@ -180,11 +180,11 @@ int gameloop(int argc, char **argv)
 			// 	break;
 			// }
 
-			object->shader.use();
-			//object->shader.setVec3("objectColor", 0.0f, 0.0f, 0.0f);
-			object->shader.setVec3("lightColor",  0.8f, 0.8f, 0.8f);
-			object->shader.setVec3("lightPos",camera.Position);
-			object->shader.setVec3("viewPos",camera.Position);	
+			object->shader->use();
+			object->shader->setVec3("objectColor", 0.0f, 0.0f, 0.5f);
+			object->shader->setVec3("lightColor",  0.0f, 0.0f, 1.0f);
+			object->shader->setVec3("lightPos",camera.Position);
+			object->shader->setVec3("viewPos",camera.Position);	
 		}
 
 		// {
@@ -207,7 +207,41 @@ int gameloop(int argc, char **argv)
 		for (int j = 0; j < dynamicsWorld->getNumCollisionObjects(); j++)
 		{
 			btCollisionObject* obj = dynamicsWorld->getCollisionObjectArray()[j];
+<<<<<<< HEAD
 			update_object_graphics(obj,projection,view,reset);
+=======
+			btTransform trans = getTransform(obj);
+
+			btCollisionShape *shape = obj->getCollisionShape();
+			shapeobject *object = (shapeobject*)shape->getUserPointer();
+			{
+				if (reset)
+					obj->getWorldTransform().setOrigin(object->resettrans.getOrigin());
+				object->shader->use();
+				object->update();
+
+				object->shader->setMat4("projection", projection);
+				object->shader->setMat4("view",view);
+
+				glm::mat4 model = glm::mat4(1.0f);
+				model = glm::scale(model, glm::vec3(shape->getLocalScaling().getX(),
+				 									shape->getLocalScaling().getY(),
+				 									shape->getLocalScaling().getZ()));
+				model = glm::translate(model, glm::vec3(trans.getOrigin().getX() / shape->getLocalScaling().getX(),
+														trans.getOrigin().getY() / shape->getLocalScaling().getY(),
+														trans.getOrigin().getZ() / shape->getLocalScaling().getZ()));
+				model = model * glm::toMat4(glm::quat(trans.getRotation().getW(),
+													trans.getRotation().getX(),
+													trans.getRotation().getY(),
+													trans.getRotation().getZ()));
+				//glm::mat4 model = glm::mat4(1.0f);;
+				//trans.getOpenGLMatrix(&model[0][0]);
+				object->shader->setMat4("model",model);
+
+				glBindVertexArray(object->VAO);
+				glDrawArrays (GL_TRIANGLES, 0, object->vertices.size());
+			}
+>>>>>>> 0d4b352ebb84f23dcc806247364096017a90f18e
 
 			//SDL_Log("world pos object %d = %f,%f,%f", j, float(trans.getOrigin().getX()), float(trans.getOrigin().getY()), float(trans.getOrigin().getZ()));
 		}
@@ -227,4 +261,10 @@ int gameloop(int argc, char **argv)
 	}
 
 	return 0;
+}
+
+
+int main(int argc, char **argv)
+{
+	return gameloop(argc, argv);
 }
