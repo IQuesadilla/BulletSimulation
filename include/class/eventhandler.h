@@ -7,15 +7,7 @@
 
 #include "camera/camera.h"
 #include "sdlwrapper/event.h"
-
-struct eventdata
-{
-	Camera *camera;
-
-	bool firstMouse = true;
-	int lastX, lastY;
-	bool quit = false;
-};
+#include "gamemain.h"
 
 void keyboard_callback(SDL_Event,arg _arg);
 void click_callback(SDL_Event,arg _arg);

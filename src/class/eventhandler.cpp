@@ -2,7 +2,7 @@
 
 void keydown_callback (SDL_Event _event, arg _arg)
 {
-	eventdata *_eventdata = static_cast<eventdata*>(_arg);
+	gamedata *_gamedata = static_cast<gamedata*>(_arg);
 
 	bool down;
 	if (_event.type == SDL_KEYDOWN)
@@ -13,27 +13,27 @@ void keydown_callback (SDL_Event _event, arg _arg)
 	switch (_event.key.keysym.sym)
     {
         case SDLK_w:
-            _eventdata->camera->ProcessKeyboard(FORWARD, down);
+            _gamedata->_camera.ProcessKeyboard(FORWARD, down);
         break;
 
         case SDLK_s:
-            _eventdata->camera->ProcessKeyboard(BACKWARD, down);
+            _gamedata->_camera.ProcessKeyboard(BACKWARD, down);
         break;
 
         case SDLK_a:
-            _eventdata->camera->ProcessKeyboard(LEFT, down);
+            _gamedata->_camera.ProcessKeyboard(LEFT, down);
         break;
 
         case SDLK_d:
-            _eventdata->camera->ProcessKeyboard(RIGHT, down);
+            _gamedata->_camera.ProcessKeyboard(RIGHT, down);
         break;
 
         case SDLK_q:
-            _eventdata->camera->ProcessKeyboard(UP, down);
+            _gamedata->_camera.ProcessKeyboard(UP, down);
         break;
 
         case SDLK_e:
-            _eventdata->camera->ProcessKeyboard(DOWN, down);
+            _gamedata->_camera.ProcessKeyboard(DOWN, down);
         break;
 
         case SDLK_ESCAPE:
@@ -44,27 +44,27 @@ void keydown_callback (SDL_Event _event, arg _arg)
 
 void mouse_callback(SDL_Event _event, arg _arg)
 {
-	eventdata *_eventdata = static_cast<eventdata*>(_arg);
+	gamedata *_gamedata = static_cast<gamedata*>(_arg);
 
-	if (_eventdata->firstMouse)
+	if (_gamedata->firstMouse)
     {
-        _eventdata->lastX = _event.motion.x;
-        _eventdata->lastY = _event.motion.y;
-        _eventdata->firstMouse = false;
+        _gamedata->lastX = _event.motion.x;
+        _gamedata->lastY = _event.motion.y;
+        _gamedata->firstMouse = false;
     }
 
-    float xoffset = _eventdata->lastX - _event.motion.x;
-    float yoffset = _event.motion.y - _eventdata->lastY;
+    float xoffset = _gamedata->lastX - _event.motion.x;
+    float yoffset = _event.motion.y - _gamedata->lastY;
 
-    _eventdata->lastX = _event.motion.x;
-    _eventdata->lastY = _event.motion.y;
+    _gamedata->lastX = _event.motion.x;
+    _gamedata->lastY = _event.motion.y;
 
-    _eventdata->camera->ProcessMouseMovement(_event.motion.xrel, _event.motion.yrel);
+    _gamedata->_camera.ProcessMouseMovement(_event.motion.xrel, _event.motion.yrel);
 }
 
 void quit_callback(SDL_Event _event,arg _arg)
 {
-	eventdata *_eventdata = static_cast<eventdata*>(_arg);
+	gamedata *_gamedata = static_cast<gamedata*>(_arg);
 
-	_eventdata->quit = false;
+	_gamedata->quit = false;
 }

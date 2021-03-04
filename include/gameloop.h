@@ -1,3 +1,5 @@
 #pragma once
 
-int gameloop();
+#include "gamemain.h"
+
+int gameloop(gamedata &_gamedata);

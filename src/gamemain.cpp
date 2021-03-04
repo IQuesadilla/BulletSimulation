@@ -1,7 +1,18 @@
 #include "gamemain.h"
 
+gamedata::gamedata(int argc, char **argv)
+{
+	gameinit(*this,argc,argv);
+}
+
+gamedata::~gamedata()
+{
+	gamekill();
+}
+
 int main(int argc, char **argv)
 {
-	gameinit(argc,argv);
-	return gameloop();
+	gamedata _gamedata (argc,argv);
+	gameloop(_gamedata);
+	return 1;
 }
