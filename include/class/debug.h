@@ -6,7 +6,7 @@
 #include <GL/gl.h>
 #include <glm/glm.hpp>
 #include <vector>
-#include "shader.h"
+#include "shader/shader.h"
 
 // Helper class; draws the world as seen by Bullet.
 // This is very handy to see it Bullet's world matches yours

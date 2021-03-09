@@ -2,6 +2,7 @@
 PROJDIR := $(realpath $(CURDIR)/)
 INCLUDEDIR := $(PROJDIR)/include
 SOURCEDIR := $(PROJDIR)/src
+CLASSDIR := $(PROJDIR)/class
 BUILDDIR := $(PROJDIR)/obj
 VCPKGDIR = ./vcpkg/installed/x64-linux/
 
@@ -9,17 +10,20 @@ VCPKGDIR = ./vcpkg/installed/x64-linux/
 TARGET = main
 
 # Decide whether the commands will be shwon or not
-VERBOSE = 
+VERBOSE = TRUE
 
 # Create the list of directories
 DIRS = . class
-LIBS = m stdc++ GL SDL2 tinyobjloader BulletDynamics BulletCollision LinearMath jsoncpp tinyxml2
-IDIRS = . bullet json
+CLASSES = camera daeload datatype sdlwrapper shader
+LIBS = m stdc++ GL SDL2 tinyobjloader BulletDynamics BulletCollision LinearMath jsoncpp tinyxml2 pthread dl
+VCPKGIDIRS = . bullet json SDL2 glm
 LIBSPATH = -L$(VCPKGDIR)/lib
-SOURCEDIRS = $(foreach dir, $(DIRS), $(addprefix $(SOURCEDIR)/, $(dir)))
+SOURCEDIRS = $(foreach dir, $(CLASSES), $(addprefix $(CLASSDIR)/, $(dir)))
+SOURCEDIRS += $(foreach dir, $(DIRS), $(addprefix $(SOURCEDIR)/, $(dir)))
 TARGETDIRS = $(foreach dir, $(DIRS), $(addprefix $(BUILDDIR)/, $(dir)))
-INCLUDES = $(foreach dir, $(DIRS), $(addprefix -I$(INCLUDEDIR)/, $(dir)))
-INCLUDES += $(foreach dir, $(IDIRS), $(addprefix -I$(VCPKGDIR)/include/, $(dir)))
+INCLUDES = -I$(CLASSDIR)/
+INCLUDES += $(foreach dir, $(DIRS), $(addprefix -I$(INCLUDEDIR)/, $(dir)))
+INCLUDES += $(foreach dir, $(VCPKGIDIRS), $(addprefix -I$(VCPKGDIR)/include/, $(dir)))
 LLIBS = $(foreach dir, $(LIBS), $(addprefix -l, $(dir)))
 
 # Generate the GCC includes parameters by adding -I before each source folder

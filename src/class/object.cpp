@@ -1,4 +1,4 @@
-#include "object.h"
+#include "class/object.h"
 
 #define TRIANGLE_VERTEX_COUNT 9
 #define TVC TRIANGLE_VERTEX_COUNT
@@ -190,7 +190,9 @@ btCollisionShape* loadObjectHeightfield(int width, int height, std::vector<btSca
 	std::vector<btCollisionShape*> shapevector;
 	shapevector.push_back(shape);
 	return shape;
-*/}
+*/
+return nullptr;
+}
 
 void dupdate(){};
 void createObjectFromJSON(btDynamicsWorld *dynamicsWorld, std::string path)
@@ -437,11 +439,11 @@ void update_object_graphics(btCollisionObject* obj, glm::mat4 projection, glm::m
 	{
 		if (reset)
 			obj->getWorldTransform().setOrigin(object->resettrans.getOrigin());
-		object->shader.use();
+		object->shader->use();
 		object->update();
 
-		object->shader.setMat4("projection", projection);
-		object->shader.setMat4("view",view);
+		object->shader->setMat4("projection", projection);
+		object->shader->setMat4("view",view);
 
 		glm::mat4 model = glm::mat4(1.0f);
 		model = glm::scale(model, glm::vec3(shape->getLocalScaling().getX(),
@@ -456,9 +458,9 @@ void update_object_graphics(btCollisionObject* obj, glm::mat4 projection, glm::m
 											trans.getRotation().getZ()));
 		//glm::mat4 model = glm::mat4(1.0f);;
 		//trans.getOpenGLMatrix(&model[0][0]);
-		object->shader.setMat4("model",model);
+		object->shader->setMat4("model",model);
 
 		glBindVertexArray(object->VAO);
-		glDrawArrays (GL_TRIANGLES, 0, object->vertices.size());
+		glDrawArrays (GL_TRIANGLES, 0, object->vertexcount);
 	}
 }

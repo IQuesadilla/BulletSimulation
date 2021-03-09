@@ -11,6 +11,10 @@
 #include "sdlwrapper/event.h"
 #include "camera/camera.h"
 
+#include "bullet/BulletCollision/btBulletCollisionCommon.h"
+#include "bullet/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h"
+#include "bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h"
+
 #define WINDOW_WIDTH 640
 #define WINDOW_HEIGHT 480
 

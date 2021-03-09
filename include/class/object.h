@@ -12,6 +12,8 @@
 #include <json/json.h>
 #include <tinyxml2.h>
 #include <fstream>
+#include <glm/glm.hpp>
+#include <glm/gtx/quaternion.hpp>
 
 #include "shader/shader.h"
 #include "daeload/daeload.h"

@@ -1,6 +1,6 @@
-#include "eventhandler.h"
+#include "class/eventhandler.h"
 
-void keydown_callback (SDL_Event _event, arg _arg)
+void keyboard_callback (SDL_Event _event, arg _arg)
 {
 	gamedata *_gamedata = static_cast<gamedata*>(_arg);
 

@@ -13,8 +13,13 @@
 				"-g","${workspaceFolder}/class/*/*.cpp",
 				"-o","main",
 				"-I","${workspaceFolder}/include",
-				"-I","${workspaceFolder}/include/class",
-				"-I","${workspaceFolder}/class/*",
+				"-I","${workspaceFolder}/class/",
+				"-I","${workspaceFolder}/vcpkg/installed/x64-linux/include",
+				"-I","${workspaceFolder}/vcpkg/installed/x64-linux/include/glm",
+				"-I","${workspaceFolder}/vcpkg/installed/x64-linux/include/json",
+				"-I","${workspaceFolder}/vcpkg/installed/x64-linux/include/SDL2",
+				"-I","${workspaceFolder}/vcpkg/installed/x64-linux/include/bullet",
+				"-L","${workspaceFolder}/vcpkg/installed/x64-linux/lib",
 				"-lstdc++",
 				"-lm",
 				"-lSDL2",
@@ -24,7 +29,9 @@
 				"-lBulletCollision",
 				"-lLinearMath",
 				"-ljsoncpp",
-				"-ltinyxml2"
+				"-ltinyxml2",
+				"-ldl",
+				"-lpthread"
 			],
 			"options": {
 				"cwd": "${workspaceFolder}"

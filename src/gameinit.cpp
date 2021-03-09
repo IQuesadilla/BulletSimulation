@@ -37,5 +37,5 @@ int gameinit(gamedata &_gamedata, int argc, char **argv)
 
 int gamekill()
 {
-
+	return 1;
 }

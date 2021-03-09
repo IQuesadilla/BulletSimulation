@@ -14,9 +14,9 @@
 #include "sdlwrapper/window.h"
 #include "sdlwrapper/glcontext.h"
 #include "sdlwrapper/event.h"
-#include "object.h"
-#include "debug.h"
-#include "eventhandler.h"
+#include "class/object.h"
+#include "class/debug.h"
+#include "class/eventhandler.h"
 
 //#define DO_DEBUG_DRAW btIDebugDraw::DebugDrawModes::DBG_DrawAabb | btIDebugDraw::DebugDrawModes::DBG_DrawWireframe
 
@@ -64,22 +64,6 @@ std::vector<btScalar> boxvertices = {
 	-1.0f, -1.0f,  1.0f,
 	1.0f, -1.0f,  1.0f
 };
-
-btTransform getTransform(btRigidBody *body)
-{
-	return body->getWorldTransform();
-}
-
-btTransform getTransform(btCollisionObject* obj)
-{
-	btRigidBody *body = btRigidBody::upcast(obj);
-	btTransform trans;
-	if (body && body->getMotionState())
-		body->getMotionState()->getWorldTransform(trans);
-	else
-		trans = obj->getWorldTransform();
-	return trans;
-}
 
 int gameloop(gamedata &_gamedata)
 {
