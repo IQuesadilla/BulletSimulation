@@ -1,0 +1,3206 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+ 
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Tue Mar  9 11:58:41 2021
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# makefile (from 'Makefile', line 16)
+DIRS = . class
+# environment
+DESKTOP_SESSION = plasma
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+SNAP_COMMON = /var/snap/code/common
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# makefile (from 'Makefile', line 10)
+TARGET = main
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 24)
+INCLUDES = -I$(CLASSDIR)/
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /home/user/.Xauthority
+# automatic
+@F = $(notdir $@)
+# default
+MAKE_VERSION := 4.2.1
+# makefile
+CURDIR := /home/user/Code/c++/BulletSimulation
+# makefile
+SHELL = /bin/sh
+# makefile (from 'Makefile', line 56)
+RM = rm -rf 
+# environment
+SNAP_DATA = /var/snap/code/57
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# makefile (from 'Makefile', line 27)
+LLIBS = $(foreach dir, $(LIBS), $(addprefix -l, $(dir)))
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-plasma:/etc/xdg
+# environment
+SNAP_INSTANCE_NAME = code
+# environment
+SNAP_ARCH = amd64
+# makefile (from 'Makefile', line 20)
+LIBSPATH = -L$(VCPKGDIR)/lib
+# makefile (from '/home/user/Code/c++/BulletSimulation/obj/./gameloop.d', line 1)
+MAKEFILE_LIST :=  Makefile /home/user/Code/c++/BulletSimulation/obj/./gamemain.d /home/user/Code/c++/BulletSimulation/obj/./gameinit.d /home/user/Code/c++/BulletSimulation/obj/./gameloop.d
+# environment
+VSCODE_NODE_CACHED_DATA_DIR = /home/user/.config/Code/CachedData/f30a9b73e8ffc278e71575118b6bf568f04587c8
+# 'override' directive
+GNUMAKEFLAGS := 
+# makefile (from 'Makefile', line 37)
+SOURCES = $(foreach dir,$(SOURCEDIRS),$(wildcard $(dir)/*.cpp))
+# environment
+MANDATORY_PATH = /usr/share/gconf/plasma.mandatory.path
+# environment
+XDG_DATA_DIRS = /usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from 'Makefile', line 6)
+BUILDDIR := /home/user/Code/c++/BulletSimulation/obj
+# makefile (from 'Makefile', line 40)
+OBJS := /home/user/Code/c++/BulletSimulation/class/camera/camera.o /home/user/Code/c++/BulletSimulation/class/daeload/daeload.o /home/user/Code/c++/BulletSimulation/class/sdlwrapper/glcontext.o /home/user/Code/c++/BulletSimulation/class/sdlwrapper/event.o /home/user/Code/c++/BulletSimulation/class/sdlwrapper/renderer.o /home/user/Code/c++/BulletSimulation/class/sdlwrapper/window.o /home/user/Code/c++/BulletSimulation/class/sdlwrapper/main.o /home/user/Code/c++/BulletSimulation/class/shader/shader.o /home/user/Code/c++/BulletSimulation/obj/./gamemain.o /home/user/Code/c++/BulletSimulation/obj/./gameinit.o /home/user/Code/c++/BulletSimulation/obj/./gameloop.o /home/user/Code/c++/BulletSimulation/obj/class/eventhandler.o /home/user/Code/c++/BulletSimulation/obj/class/object.o /home/user/Code/c++/BulletSimulation/obj/class/debug.o
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-99079e87-46a4-4086-9547-a8b9c2bb3536.sock
+# environment
+PAM_KWALLET5_LOGIN = /run/user/1000/kwallet5.socket
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session2
+# environment
+GSETTINGS_SCHEMA_DIR = /snap/code/57/usr/share/glib-2.0/schemas
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/user/.local/bin:/opt/devkitpro/tools/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+XCURSOR_THEME = breeze_cursors
+# environment
+SESSION_MANAGER = local/user:@/tmp/.ICE-unix/1323,unix/user:/tmp/.ICE-unix/1323
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'Makefile', line 23)
+TARGETDIRS = $(foreach dir, $(DIRS), $(addprefix $(BUILDDIR)/, $(dir)))
+# environment
+GDK_PIXBUF_MODULE_FILE = /home/user/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# environment
+SNAP = /snap/code/57
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# makefile (from 'Makefile', line 34)
+VPATH = $(SOURCEDIRS)
+# environment
+SNAP_VERSION = f30a9b73
+# makefile (from 'Makefile', line 68)
+HIDE = 
+# environment
+VSCODE_LOG_STACK = false
+# environment
+DISABLE_WAYLAND = 1
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=60c4227a-6088-4fed-be0c-87f5f0dd6b27&iid=60c4227a-6088-4fed-be0c-87f5f0dd6b27&sid=60c4227a-6088-4fed-be0c-87f5f0dd6b27","uploadToServer":true}
+# environment
+GDK_PIXBUF_MODULEDIR = /snap/code/57/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 64)
+ 
+PSEP = $(strip $(SEP))
+# environment
+XDG_SESSION_DESKTOP = KDE
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-xBQMRMvxqq0n/agent.1190
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+SNAP_INSTANCE_KEY = 
+# environment
+PWD = /home/user/Code/c++/BulletSimulation
+# environment
+KDE_SESSION_VERSION = 5
+# default
+.LOADED := 
+# environment
+XDG_SEAT = seat0
+# environment
+SSH_AGENT_PID = 1246
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = KDE
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /home/user
+# environment
+VSCODE_CLI = 1
+# environment
+LOGNAME = user
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+# environment
+SNAP_CONTEXT = BKrAoSuGjDUZg8zBWCpT0n5A6tFu9fuVI0d2c6ud5ycpyEDoP8IX
+# makefile (from 'Makefile', line 17)
+CLASSES = camera daeload datatype sdlwrapper shader
+# environment
+KDE_FULL_SESSION = true
+# environment
+SNAP_USER_COMMON = /home/user/snap/code/common
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile (from 'Makefile', line 58)
+MKDIR = mkdir -p
+# environment
+XDG_VTNR = 1
+# environment
+DEVKITPRO = /opt/devkitpro
+# environment
+MAKELEVEL := 0
+# environment
+SNAP_REAL_HOME = /home/user
+# makefile (from 'Makefile', line 13)
+VERBOSE = TRUE
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# makefile (from 'Makefile', line 57)
+RMDIR = rm -rf 
+# environment
+DEVKITARM = /opt/devkitpro/devkitARM
+# environment
+SNAP_USER_DATA = /home/user/snap/code/57
+# environment
+SHLVL = 0
+# makefile (from 'Makefile', line 7)
+VCPKGDIR = $(PROJDIR)/vcpkg/installed/x64-linux/
+# makefile (from 'Makefile', line 46)
+CC = gcc
+# environment
+XDG_SESSION_ID = 3
+# environment
+USER = user
+# environment
+SNAP_REVISION = 57
+# makefile
+.DEFAULT_GOAL := all
+# environment
+XDG_CURRENT_DESKTOP = KDE
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# makefile (from 'Makefile', line 74)
+define generateRules
+$(1)/%.o: %.cpp
+	@echo Building $$@
+	#$(HIDE)$(CC) -c $$(INCLUDES) -o $$(subst /,$$(PSEP),$$@) $$(subst /,$$(PSEP),$$<) -MMD
+endef
+# makefile (from 'Makefile', line 59)
+ERRIGNORE = 2>/dev/null
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-16068fa4-1.54.1-main.sock
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+BREAKPAD_DUMP_LOCATION = /home/user/.config/Code/exthost Crash Reports
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from 'Makefile', line 60)
+SEP = /
+# makefile (from 'Makefile', line 22)
+SOURCEDIRS = $(foreach dir, $(CLASSES), $(addprefix $(CLASSDIR)/, $(dir))) $(foreach dir, $(DIRS), $(addprefix $(SOURCEDIR)/, $(dir)))
+# automatic
++F = $(notdir $+)
+# makefile (from 'Makefile', line 19)
+VCPKGIDIRS = . bullet json SDL2 glm
+# environment
+QT_ACCESSIBILITY = 1
+# environment
+DEFAULTS_PATH = /usr/share/gconf/plasma.default.path
+# default
+MAKEFILES := 
+# environment
+SNAP_COOKIE = BKrAoSuGjDUZg8zBWCpT0n5A6tFu9fuVI0d2c6ud5ycpyEDoP8IX
+# automatic
+<F = $(notdir $<)
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from 'Makefile', line 2)
+PROJDIR := /home/user/Code/c++/BulletSimulation
+# environment
+SNAP_NAME = code
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# makefile (from 'Makefile', line 3)
+INCLUDEDIR := /home/user/Code/c++/BulletSimulation/include
+# makefile (from 'Makefile', line 18)
+LIBS = m stdc++ GL SDL2 tinyobjloader BulletDynamics BulletCollision LinearMath jsoncpp tinyxml2 pthread dl
+# automatic
+ 
+^F = $(notdir $^)
+# makefile (from 'Makefile', line 43)
+DEPS = $(OBJS:.o=.d)
+# default
+SUFFIXES := 
+# environment
+SNAP_REEXEC = 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DEVKITPPC = /opt/devkitpro/devkitPPC
+# default
+.RECIPEPREFIX := 
+# makefile (from 'Makefile', line 5)
+CLASSDIR := /home/user/Code/c++/BulletSimulation/class
+# environment
+LANG = en_US.UTF-8
+# makefile (from 'Makefile', line 4)
+SOURCEDIR := /home/user/Code/c++/BulletSimulation/src
+# environment
+VSCODE_PID = 152631
+# environment
+KDE_SESSION_UID = 1000
+# variable set hash-table stats:
+# Load=143/1024=14%, Rehash=0, Collisions=24/237=10%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# /home/user/Code/c++/BulletSimulation/class/camera (device 66306, inode 14032805): 6 files, no impossibilities.
+# . (device 66306, inode 13372820): 15 files, no impossibilities.
+# /home/user/Code/c++/BulletSimulation/class/shader (device 66306, inode 14193043): 6 files, no impossibilities.
+# /home/user/Code/c++/BulletSimulation/src/. (device 66306, inode 19403026): 7 files, no impossibilities.
+# /home/user/Code/c++/BulletSimulation/class/daeload (device 66306, inode 14455033): 6 files, no impossibilities.
+# /home/user/Code/c++/BulletSimulation/class/sdlwrapper (device 66306, inode 14455164): 15 files, no impossibilities.
+# /home/user/Code/c++/BulletSimulation/src/class (device 66306, inode 19403027): 5 files, no impossibilities.
+# /home/user/Code/c++/BulletSimulation/class/datatype: could not be stat'd.
+
+# 60 files, no impossibilities in 8 directories.
+
+# Implicit Rules
+
+/home/user/Code/c++/BulletSimulation/obj/./%.o: %.cpp
+#  recipe to execute (from 'Makefile', line 92):
+	@echo Building $@
+	#gcc -c $(INCLUDES) -o $(subst /,$(PSEP),$@) $(subst /,$(PSEP),$<) -MMD
+
+/home/user/Code/c++/BulletSimulation/obj/class/%.o: %.cpp
+#  recipe to execute (from 'Makefile', line 92):
+	@echo Building $@
+	#gcc -c $(INCLUDES) -o $(subst /,$(PSEP),$@) $(subst /,$(PSEP),$<) -MMD
+
+# 2 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btSimpleBroadphase.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_float2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_int3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/matrix_float2x2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_events.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_int4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+/home/user/Code/c++/BulletSimulation/obj/./gameinit.o: /home/user/Code/c++/BulletSimulation/src/./gameinit.cpp /home/user/Code/c++/BulletSimulation/include/./gameinit.h vcpkg/installed/x64-linux//include/./SDL2/SDL.h vcpkg/installed/x64-linux//include/./SDL2/SDL_main.h vcpkg/installed/x64-linux//include/./SDL2/SDL_stdinc.h vcpkg/installed/x64-linux//include/./SDL2/SDL_config.h vcpkg/installed/x64-linux//include/./SDL2/SDL_platform.h vcpkg/installed/x64-linux//include/./SDL2/begin_code.h vcpkg/installed/x64-linux//include/./SDL2/close_code.h vcpkg/installed/x64-linux//include/./SDL2/SDL_assert.h vcpkg/installed/x64-linux//include/./SDL2/SDL_atomic.h vcpkg/installed/x64-linux//include/./SDL2/SDL_audio.h vcpkg/installed/x64-linux//include/./SDL2/SDL_error.h vcpkg/installed/x64-linux//include/./SDL2/SDL_endian.h vcpkg/installed/x64-linux//include/./SDL2/SDL_mutex.h vcpkg/installed/x64-linux//include/./SDL2/SDL_thread.h vcpkg/installed/x64-linux//include/./SDL2/SDL_rwops.h vcpkg/installed/x64-linux//include/./SDL2/SDL_clipboard.h vcpkg/installed/x64-linux//include/./SDL2/SDL_cpuinfo.h vcpkg/installed/x64-linux//include/./SDL2/SDL_events.h vcpkg/installed/x64-linux//include/./SDL2/SDL_video.h vcpkg/installed/x64-linux//include/./SDL2/SDL_pixels.h vcpkg/installed/x64-linux//include/./SDL2/SDL_rect.h vcpkg/installed/x64-linux//include/./SDL2/SDL_surface.h vcpkg/installed/x64-linux//include/./SDL2/SDL_blendmode.h vcpkg/installed/x64-linux//include/./SDL2/SDL_keyboard.h vcpkg/installed/x64-linux//include/./SDL2/SDL_keycode.h vcpkg/installed/x64-linux//include/./SDL2/SDL_scancode.h vcpkg/installed/x64-linux//include/./SDL2/SDL_mouse.h vcpkg/installed/x64-linux//include/./SDL2/SDL_joystick.h vcpkg/installed/x64-linux//include/./SDL2/SDL_gamecontroller.h vcpkg/installed/x64-linux//include/./SDL2/SDL_sensor.h vcpkg/installed/x64-linux//include/./SDL2/SDL_quit.h vcpkg/installed/x64-linux//include/./SDL2/SDL_gesture.h vcpkg/installed/x64-linux//include/./SDL2/SDL_touch.h vcpkg/installed/x64-linux//include/./SDL2/SDL_filesystem.h vcpkg/installed/x64-linux//include/./SDL2/SDL_haptic.h vcpkg/installed/x64-linux//include/./SDL2/SDL_hints.h vcpkg/installed/x64-linux//include/./SDL2/SDL_loadso.h vcpkg/installed/x64-linux//include/./SDL2/SDL_log.h vcpkg/installed/x64-linux//include/./SDL2/SDL_messagebox.h vcpkg/installed/x64-linux//include/./SDL2/SDL_metal.h vcpkg/installed/x64-linux//include/./SDL2/SDL_power.h vcpkg/installed/x64-linux//include/./SDL2/SDL_render.h vcpkg/installed/x64-linux//include/./SDL2/SDL_shape.h vcpkg/installed/x64-linux//include/./SDL2/SDL_system.h vcpkg/installed/x64-linux//include/./SDL2/SDL_timer.h vcpkg/installed/x64-linux//include/./SDL2/SDL_version.h vcpkg/installed/x64-linux//include/./SDL2/SDL_locale.h vcpkg/installed/x64-linux//include/./SDL2/SDL_misc.h /home/user/Code/c++/BulletSimulation/include/./gamemain.h /home/user/Code/c++/BulletSimulation/include/./gameloop.h /home/user/Code/c++/BulletSimulation/class/sdlwrapper/window.h /home/user/Code/c++/BulletSimulation/class/sdlwrapper/renderer.h /home/user/Code/c++/BulletSimulation/class/datatypes/datatypes.h vcpkg/installed/x64-linux//include/./glm/glm.hpp vcpkg/installed/x64-linux//include/./glm/detail/_fixes.hpp vcpkg/installed/x64-linux//include/./glm/detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/detail/../simd/platform.h vcpkg/installed/x64-linux//include/./glm/fwd.hpp vcpkg/installed/x64-linux//include/./glm/detail/qualifier.hpp vcpkg/installed/x64-linux//include/./glm/detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/vec2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec2.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/./compute_vector_relational.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/./setup.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_float2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_float2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_double2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_double2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_int2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_int2_sized.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../ext/scalar_int_sized.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../ext/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint2_sized.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../ext/scalar_uint_sized.hpp vcpkg/installed/x64-linux//include/./glm/vec3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec3.inl vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_float3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_float3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_double3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_double3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_int3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_int3_sized.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint3_sized.hpp vcpkg/installed/x64-linux//include/./glm/vec4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec4.inl vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_float4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_float4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_double4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_double4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_int4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_int4_sized.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint4_sized.hpp vcpkg/installed/x64-linux//include/./glm/mat2x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/matrix_double2x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_mat2x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_mat2x2.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../matrix.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat2x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double2x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat2x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat2x3.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double2x3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float2x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float2x3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat2x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double2x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat2x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat2x4.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double2x4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float2x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float2x4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat3x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x2.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat3x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x3.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat3x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x4.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat4x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x2.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat4x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x3.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat4x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x4.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/func_matrix.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../geometric.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/func_geometric.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../exponential.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/type_vec1.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/type_vec1.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/func_exponential.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/../vector_relational.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/../detail/func_vector_relational.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/_vectorize.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../common.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/_fixes.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/func_common.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/compute_common.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/./ext/matrix_double2x2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/matrix_float2x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/matrix_float2x2_precision.hpp vcpkg/installed/x64-linux//include/./glm/trigonometric.hpp vcpkg/installed/x64-linux//include/./glm/detail/func_trigonometric.inl vcpkg/installed/x64-linux//include/./glm/packing.hpp vcpkg/installed/x64-linux//include/./glm/detail/func_packing.inl vcpkg/installed/x64-linux//include/./glm/detail/type_half.hpp vcpkg/installed/x64-linux//include/./glm/detail/type_half.inl vcpkg/installed/x64-linux//include/./glm/integer.hpp vcpkg/installed/x64-linux//include/./glm/detail/func_integer.inl /home/user/Code/c++/BulletSimulation/class/sdlwrapper/glcontext.h /home/user/Code/c++/BulletSimulation/class/sdlwrapper/event.h /home/user/Code/c++/BulletSimulation/class/camera/camera.h vcpkg/installed/x64-linux//include/./glm/gtc/matrix_transform.hpp vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_projection.hpp vcpkg/installed/x64-linux//include/./glm/gtc/../ext/../gtc/constants.hpp vcpkg/installed/x64-linux//include/./glm/gtc/../ext/../gtc/../ext/scalar_constants.hpp vcpkg/installed/x64-linux//include/./glm/gtc/../ext/../gtc/../ext/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/gtc/../ext/../gtc/../ext/scalar_constants.inl vcpkg/installed/x64-linux//include/./glm/gtc/../ext/../gtc/constants.inl vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_projection.inl vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_clip_space.hpp vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_clip_space.inl vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_transform.hpp vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_transform.inl vcpkg/installed/x64-linux//include/./glm/gtc/matrix_transform.inl vcpkg/installed/x64-linux//include/./bullet/BulletCollision/btBulletCollisionCommon.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionWorld.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btVector3.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btScalar.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMinMax.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btAlignedAllocator.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btTransform.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMatrix3x3.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btVector3.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btQuaternion.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btQuadWord.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionObject.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMotionState.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btTransform.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btAlignedAllocator.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btAlignedObjectArray.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionDispatcher.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btDispatcher.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btScalar.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/NarrowPhaseCollision/btPersistentManifold.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/NarrowPhaseCollision/btManifoldPoint.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btTransformUtil.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btManifoldResult.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/NarrowPhaseCollision/btDiscreteCollisionDetectorInterface.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionObjectWrapper.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionObject.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionCreateFunc.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCache.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btBroadphaseInterface.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCallback.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btBoxShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btPolyhedralConvexShape.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMatrix3x3.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btConvexInternalShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btConvexShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btCollisionShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btCollisionMargin.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btAabbUtil2.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMinMax.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btSphereShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btCapsuleShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btCylinderShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btBoxShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btConeShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btStaticPlaneShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btConcaveShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btTriangleCallback.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btConvexHullShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btTriangleMesh.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btStridingMeshInterface.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btTriangleMeshShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btOptimizedBvh.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btQuantizedBvh.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btTriangleInfoMap.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btHashMap.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btAlignedObjectArray.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btSerializer.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btHashMap.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btTriangleMeshShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btCompoundShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btTetrahedronShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btEmptyShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btMultiSphereShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btUniformScalingShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btSphereSphereCollisionAlgorithm.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btActivatingCollisionAlgorithm.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btCollisionAlgorithm.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionCreateFunc.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionConfiguration.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionDispatcher.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btSimpleBroadphase.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCache.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btAxisSweep3.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btDbvt.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btAxisSweep3Internal.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btQuaternion.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btDefaultMotionState.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMotionState.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btQuickprof.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btIDebugDraw.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btTypedConstraint.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btSolverConstraint.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btJacobianEntry.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btSolverBody.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/Dynamics/btRigidBody.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btContactSolverInfo.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btSolverBody.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btSolverConstraint.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/NarrowPhaseCollision/btManifoldPoint.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btConstraintSolver.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btDynamicsWorld.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btThreads.h /home/user/Code/c++/BulletSimulation/include/./class/eventhandler.h vcpkg/installed/x64-linux//include/./SDL2/SDL_events.h vcpkg/installed/x64-linux//include/./SDL2/SDL_log.h vcpkg/installed/x64-linux//include/./bullet/btBulletCollisionCommon.h vcpkg/installed/x64-linux//include/./bullet/btBulletDynamicsCommon.h vcpkg/installed/x64-linux//include/./bullet/btBulletCollisionCommon.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btSimpleDynamicsWorld.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btRigidBody.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btPoint2PointConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btJacobianEntry.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btTypedConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btHingeConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btConeTwistConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGeneric6DofConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSliderConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGeneric6DofSpringConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGeneric6DofConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btUniversalConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btHinge2Constraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGeneric6DofSpring2Constraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGearConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btFixedConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Vehicle/btRaycastVehicle.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Vehicle/btVehicleRaycaster.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Vehicle/btWheelInfo.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/Dynamics/btActionInterface.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/Dynamics/btRigidBody.h /home/user/Code/c++/BulletSimulation/include/./class/object.h vcpkg/installed/x64-linux//include/./tiny_obj_loader.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConcaveShape.h vcpkg/installed/x64-linux//include/./json/json.h vcpkg/installed/x64-linux//include/./json/config.h vcpkg/installed/x64-linux//include/./json/allocator.h vcpkg/installed/x64-linux//include/./json/version.h vcpkg/installed/x64-linux//include/./json/json_features.h vcpkg/installed/x64-linux//include/./json/forwards.h vcpkg/installed/x64-linux//include/./json/reader.h vcpkg/installed/x64-linux//include/./json/value.h vcpkg/installed/x64-linux//include/./json/writer.h vcpkg/installed/x64-linux//include/./tinyxml2.h vcpkg/installed/x64-linux//include/./glm/gtx/quaternion.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/quaternion.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/vector_relational.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/vector_relational.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/type_float.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_common.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../ext/quaternion_geometric.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../ext/quaternion_geometric.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_common.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_float.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/type_quat.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/../ext/quaternion_relational.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/../ext/quaternion_relational.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/type_quat.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_float_precision.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_double.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_double_precision.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_trigonometric.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_trigonometric.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_transform.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_transform.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/quaternion.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/epsilon.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/epsilon.inl vcpkg/installed/x64-linux//include/./glm/gtx/../ext/quaternion_exponential.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../ext/quaternion_exponential.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtx/norm.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtx/../gtx/component_wise.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtx/../gtx/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtx/../gtx/component_wise.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtx/norm.inl vcpkg/installed/x64-linux//include/./glm/gtx/quaternion.inl /home/user/Code/c++/BulletSimulation/class/shader/shader.h /home/user/Code/c++/BulletSimulation/class/daeload/daeload.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_rwops.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/func_common.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_system.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_assert.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./json/version.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btSphereSphereCollisionAlgorithm.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_touch.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_haptic.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/mat2x2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtc/../ext/../gtc/../ext/../detail/setup.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtx/../gtx/component_wise.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionObject.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_sensor.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../ext/quaternion_exponential.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x2.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Vehicle/btRaycastVehicle.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_double2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_float4_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+ 
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/matrix_double2x2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConcaveShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btDefaultMotionState.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/sdlwrapper/main.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/include/class/daeload.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionDispatcher.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/camera/camera.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_clip_space.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/vec3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/daeload/daeload.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../matrix.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_clipboard.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConvexInternalShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGeneric6DofSpringConstraint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec2.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btCollisionAlgorithm.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/setup.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/LinearMath/btIDebugDraw.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/LinearMath/btTransform.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/type_vec1.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: directories main
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/12=0%
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btCylinderShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCache.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/LinearMath/btVector3.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/func_exponential.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/detail/type_half.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleInfoMap.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_keyboard.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_float_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btDbvt.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btActivatingCollisionAlgorithm.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./tinyxml2.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_video.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat4x3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PHONY: all clean directories
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../geometric.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_main.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_cpuinfo.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/integer.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtc/../ext/../gtc/constants.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btAxisSweep3.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/detail/qualifier.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./json/writer.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_mat2x2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint2_sized.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_double3_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_float3_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtc/../ext/../gtc/../ext/scalar_constants.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/packing.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_config.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btUniversalConstraint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x2_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x2_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float2x4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/sdlwrapper/event.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_int2_sized.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/close_code.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btDynamicsWorld.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btSimpleDynamicsWorld.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/setup.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/btBulletDynamicsCommon.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCache.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat2x4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x2_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionObjectWrapper.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btEmptyShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btSolverBody.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./tiny_obj_loader.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/obj/class/eventhandler.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConvexShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_messagebox.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/setup.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btCollisionShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionWorld.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_transform.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSolverConstraint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float2x3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/obj/class/object.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_double4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionObject.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec4.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Vehicle/btVehicleRaycaster.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/include/./class/eventhandler.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btPolyhedralConvexShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/btBulletCollisionCommon.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat2x3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletDynamics/Dynamics/btActionInterface.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-03-09 11:58:39.787385004
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_quit.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/obj/class/debug.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btHashMap.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSliderConstraint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btManifoldResult.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double2x3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/NarrowPhaseCollision/btDiscreteCollisionDetectorInterface.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtx/norm.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/daeload/daeload.d:
+#  Implicit rule search has been done.
+ 
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_log.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/sdlwrapper/renderer.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/obj/./gamemain.d:
+#  Implicit rule search has been done.
+#  Last modified 2021-03-05 15:32:48.347412801
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x4.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btActivatingCollisionAlgorithm.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/compute_common.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_endian.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat2x4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btAabbUtil2.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/LinearMath/btSerializer.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/sdlwrapper/window.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x2_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/sdlwrapper/event.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/include/class/debug.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/detail/setup.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btCapsuleShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCallback.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/type_quat.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../ext/quaternion_exponential.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/sdlwrapper/renderer.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/include/./gamemain.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_double.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btPoint2PointConstraint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../common.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/./compute_vector_relational.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/_vectorize.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_trigonometric.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_trigonometric.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtc/matrix_transform.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_pixels.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/obj/./gameloop.d:
+#  Implicit rule search has been done.
+#  Last modified 2021-01-12 14:22:10.778374133
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_float4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/sdlwrapper/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btAlignedObjectArray.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_clip_space.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x3.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/camera/camera.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../ext/quaternion_geometric.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool2_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGeneric6DofConstraint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btStridingMeshInterface.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat2x3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/../ext/quaternion_relational.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConvexHullShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btBroadphaseInterface.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btMatrix3x3.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/type_vec1.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_transform.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_transform.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_surface.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/NarrowPhaseCollision/btManifoldPoint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/detail/type_half.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_mouse.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/shader/shader.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/quaternion.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/detail/func_integer.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/../vector_relational.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btTransform.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/sdlwrapper/glcontext.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_float.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/setup.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./json/forwards.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/vec2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGearConstraint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btConvexHullShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtc/../ext/../gtc/constants.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/src/./gamemain.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_mat2x2.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/fwd.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_atomic.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_keycode.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btConvexShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/quaternion.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_double3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_float3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btContactSolverInfo.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x4.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/trigonometric.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/include/./class/object.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_audio.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./json/config.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec3.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../detail/setup.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletDynamics/Dynamics/btRigidBody.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_joystick.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_projection.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/src/./gameloop.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_common.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btAxisSweep3.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_filesystem.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/sdlwrapper/window.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat3x2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_power.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/LinearMath/btQuickprof.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_double_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/obj/class/eventhandler.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/func_matrix.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Vehicle/btWheelInfo.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btAxisSweep3Internal.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../ext/../detail/setup.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x3.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btCollisionMargin.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/NarrowPhaseCollision/btPersistentManifold.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btUniformScalingShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_mutex.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/LinearMath/btMotionState.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleMeshShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/LinearMath/btScalar.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_int4_sized.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/LinearMath/btQuaternion.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/sdlwrapper/glcontext.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btSolverConstraint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat4x4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/quaternion.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btCompoundShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_int2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btSphereShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btSphereShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/sdlwrapper/renderer.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btMultiSphereShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/type_float.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/include/class/camera.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/obj/class/debug.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x4_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x4_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btBroadphaseInterface.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/../detail/setup.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/daeload/daeload.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_thread.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+/home/user/Code/c++/BulletSimulation/obj/./gamemain.o: /home/user/Code/c++/BulletSimulation/src/./gamemain.cpp /home/user/Code/c++/BulletSimulation/include/./gamemain.h /home/user/Code/c++/BulletSimulation/include/./gameinit.h vcpkg/installed/x64-linux//include/./SDL2/SDL.h vcpkg/installed/x64-linux//include/./SDL2/SDL_main.h vcpkg/installed/x64-linux//include/./SDL2/SDL_stdinc.h vcpkg/installed/x64-linux//include/./SDL2/SDL_config.h vcpkg/installed/x64-linux//include/./SDL2/SDL_platform.h vcpkg/installed/x64-linux//include/./SDL2/begin_code.h vcpkg/installed/x64-linux//include/./SDL2/close_code.h vcpkg/installed/x64-linux//include/./SDL2/SDL_assert.h vcpkg/installed/x64-linux//include/./SDL2/SDL_atomic.h vcpkg/installed/x64-linux//include/./SDL2/SDL_audio.h vcpkg/installed/x64-linux//include/./SDL2/SDL_error.h vcpkg/installed/x64-linux//include/./SDL2/SDL_endian.h vcpkg/installed/x64-linux//include/./SDL2/SDL_mutex.h vcpkg/installed/x64-linux//include/./SDL2/SDL_thread.h vcpkg/installed/x64-linux//include/./SDL2/SDL_rwops.h vcpkg/installed/x64-linux//include/./SDL2/SDL_clipboard.h vcpkg/installed/x64-linux//include/./SDL2/SDL_cpuinfo.h vcpkg/installed/x64-linux//include/./SDL2/SDL_events.h vcpkg/installed/x64-linux//include/./SDL2/SDL_video.h vcpkg/installed/x64-linux//include/./SDL2/SDL_pixels.h vcpkg/installed/x64-linux//include/./SDL2/SDL_rect.h vcpkg/installed/x64-linux//include/./SDL2/SDL_surface.h vcpkg/installed/x64-linux//include/./SDL2/SDL_blendmode.h vcpkg/installed/x64-linux//include/./SDL2/SDL_keyboard.h vcpkg/installed/x64-linux//include/./SDL2/SDL_keycode.h vcpkg/installed/x64-linux//include/./SDL2/SDL_scancode.h vcpkg/installed/x64-linux//include/./SDL2/SDL_mouse.h vcpkg/installed/x64-linux//include/./SDL2/SDL_joystick.h vcpkg/installed/x64-linux//include/./SDL2/SDL_gamecontroller.h vcpkg/installed/x64-linux//include/./SDL2/SDL_sensor.h vcpkg/installed/x64-linux//include/./SDL2/SDL_quit.h vcpkg/installed/x64-linux//include/./SDL2/SDL_gesture.h vcpkg/installed/x64-linux//include/./SDL2/SDL_touch.h vcpkg/installed/x64-linux//include/./SDL2/SDL_filesystem.h vcpkg/installed/x64-linux//include/./SDL2/SDL_haptic.h vcpkg/installed/x64-linux//include/./SDL2/SDL_hints.h vcpkg/installed/x64-linux//include/./SDL2/SDL_loadso.h vcpkg/installed/x64-linux//include/./SDL2/SDL_log.h vcpkg/installed/x64-linux//include/./SDL2/SDL_messagebox.h vcpkg/installed/x64-linux//include/./SDL2/SDL_metal.h vcpkg/installed/x64-linux//include/./SDL2/SDL_power.h vcpkg/installed/x64-linux//include/./SDL2/SDL_render.h vcpkg/installed/x64-linux//include/./SDL2/SDL_shape.h vcpkg/installed/x64-linux//include/./SDL2/SDL_system.h vcpkg/installed/x64-linux//include/./SDL2/SDL_timer.h vcpkg/installed/x64-linux//include/./SDL2/SDL_version.h vcpkg/installed/x64-linux//include/./SDL2/SDL_locale.h vcpkg/installed/x64-linux//include/./SDL2/SDL_misc.h /home/user/Code/c++/BulletSimulation/include/./class/eventhandler.h vcpkg/installed/x64-linux//include/./SDL2/SDL_events.h vcpkg/installed/x64-linux//include/./SDL2/SDL_log.h /home/user/Code/c++/BulletSimulation/class/camera/camera.h vcpkg/installed/x64-linux//include/./glm/glm.hpp vcpkg/installed/x64-linux//include/./glm/detail/_fixes.hpp vcpkg/installed/x64-linux//include/./glm/detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/detail/../simd/platform.h vcpkg/installed/x64-linux//include/./glm/fwd.hpp vcpkg/installed/x64-linux//include/./glm/detail/qualifier.hpp vcpkg/installed/x64-linux//include/./glm/detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/vec2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec2.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/./compute_vector_relational.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/./setup.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_float2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_float2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_double2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_double2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_int2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_int2_sized.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../ext/scalar_int_sized.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../ext/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint2_sized.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../ext/scalar_uint_sized.hpp vcpkg/installed/x64-linux//include/./glm/vec3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec3.inl vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_float3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_float3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_double3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_double3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_int3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_int3_sized.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint3_sized.hpp vcpkg/installed/x64-linux//include/./glm/vec4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec4.inl vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_float4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_float4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_double4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_double4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_int4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_int4_sized.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint4_sized.hpp vcpkg/installed/x64-linux//include/./glm/mat2x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/matrix_double2x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_mat2x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_mat2x2.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../matrix.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat2x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double2x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat2x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat2x3.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double2x3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float2x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float2x3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat2x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double2x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat2x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat2x4.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double2x4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float2x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float2x4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat3x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x2.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat3x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x3.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat3x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x4.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat4x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x2.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat4x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x3.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x3.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x3_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat4x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x4.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x4.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x4_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/func_matrix.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../geometric.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/func_geometric.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../exponential.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/type_vec1.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/type_vec1.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/func_exponential.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/../vector_relational.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/../detail/func_vector_relational.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/_vectorize.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../common.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/_fixes.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/func_common.inl vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/compute_common.hpp vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/./ext/matrix_double2x2_precision.hpp vcpkg/installed/x64-linux//include/./glm/./ext/matrix_float2x2.hpp vcpkg/installed/x64-linux//include/./glm/./ext/matrix_float2x2_precision.hpp vcpkg/installed/x64-linux//include/./glm/trigonometric.hpp vcpkg/installed/x64-linux//include/./glm/detail/func_trigonometric.inl vcpkg/installed/x64-linux//include/./glm/packing.hpp vcpkg/installed/x64-linux//include/./glm/detail/func_packing.inl vcpkg/installed/x64-linux//include/./glm/detail/type_half.hpp vcpkg/installed/x64-linux//include/./glm/detail/type_half.inl vcpkg/installed/x64-linux//include/./glm/integer.hpp vcpkg/installed/x64-linux//include/./glm/detail/func_integer.inl vcpkg/installed/x64-linux//include/./glm/gtc/matrix_transform.hpp vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_projection.hpp vcpkg/installed/x64-linux//include/./glm/gtc/../ext/../gtc/constants.hpp vcpkg/installed/x64-linux//include/./glm/gtc/../ext/../gtc/../ext/scalar_constants.hpp vcpkg/installed/x64-linux//include/./glm/gtc/../ext/../gtc/../ext/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/gtc/../ext/../gtc/../ext/scalar_constants.inl vcpkg/installed/x64-linux//include/./glm/gtc/../ext/../gtc/constants.inl vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_projection.inl vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_clip_space.hpp vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_clip_space.inl vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_transform.hpp vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_transform.inl vcpkg/installed/x64-linux//include/./glm/gtc/matrix_transform.inl /home/user/Code/c++/BulletSimulation/class/sdlwrapper/event.h vcpkg/installed/x64-linux//include/./bullet/btBulletCollisionCommon.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionWorld.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btVector3.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btScalar.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMinMax.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btAlignedAllocator.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btTransform.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMatrix3x3.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btVector3.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btQuaternion.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btQuadWord.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionObject.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMotionState.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btTransform.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btAlignedAllocator.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btAlignedObjectArray.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionDispatcher.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btDispatcher.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btScalar.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/NarrowPhaseCollision/btPersistentManifold.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/NarrowPhaseCollision/btManifoldPoint.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btTransformUtil.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btManifoldResult.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/NarrowPhaseCollision/btDiscreteCollisionDetectorInterface.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionObjectWrapper.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionObject.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionCreateFunc.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCache.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btBroadphaseInterface.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCallback.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionObject.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btBoxShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btPolyhedralConvexShape.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMatrix3x3.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConvexInternalShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConvexShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btCollisionShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btCollisionMargin.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btAabbUtil2.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMinMax.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btSphereShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btCapsuleShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btCylinderShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btBoxShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConeShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btStaticPlaneShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConcaveShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleCallback.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConvexHullShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleMesh.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btStridingMeshInterface.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleMeshShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btOptimizedBvh.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btQuantizedBvh.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleInfoMap.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btHashMap.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btAlignedObjectArray.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btSerializer.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btHashMap.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleMeshShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btCompoundShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTetrahedronShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btEmptyShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btMultiSphereShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btUniformScalingShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btSphereSphereCollisionAlgorithm.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btActivatingCollisionAlgorithm.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btCollisionAlgorithm.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionCreateFunc.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionConfiguration.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionDispatcher.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btSimpleBroadphase.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCache.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btAxisSweep3.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btBroadphaseInterface.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCallback.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btDbvt.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btAxisSweep3Internal.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btQuaternion.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btTransform.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btDefaultMotionState.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btMotionState.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btQuickprof.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btScalar.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btIDebugDraw.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btVector3.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btTransform.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btSerializer.h vcpkg/installed/x64-linux//include/./bullet/btBulletDynamicsCommon.h vcpkg/installed/x64-linux//include/./bullet/btBulletCollisionCommon.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btDynamicsWorld.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionWorld.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btContactSolverInfo.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btThreads.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btSimpleDynamicsWorld.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btRigidBody.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btPoint2PointConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btJacobianEntry.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btTypedConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSolverConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSolverBody.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/Dynamics/btRigidBody.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btHingeConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btConeTwistConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGeneric6DofConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSliderConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGeneric6DofSpringConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGeneric6DofConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btUniversalConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btHinge2Constraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGeneric6DofSpring2Constraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGearConstraint.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btTypedConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btFixedConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btSolverBody.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btSolverConstraint.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/NarrowPhaseCollision/btManifoldPoint.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btConstraintSolver.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Vehicle/btRaycastVehicle.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Vehicle/btVehicleRaycaster.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Vehicle/btWheelInfo.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/Dynamics/btActionInterface.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/Dynamics/btRigidBody.h /home/user/Code/c++/BulletSimulation/include/./class/object.h vcpkg/installed/x64-linux//include/./tiny_obj_loader.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h vcpkg/installed/x64-linux//include/./json/json.h vcpkg/installed/x64-linux//include/./json/config.h vcpkg/installed/x64-linux//include/./json/allocator.h vcpkg/installed/x64-linux//include/./json/version.h vcpkg/installed/x64-linux//include/./json/json_features.h vcpkg/installed/x64-linux//include/./json/forwards.h vcpkg/installed/x64-linux//include/./json/reader.h vcpkg/installed/x64-linux//include/./json/value.h vcpkg/installed/x64-linux//include/./json/writer.h vcpkg/installed/x64-linux//include/./tinyxml2.h vcpkg/installed/x64-linux//include/./glm/gtx/quaternion.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/quaternion.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/vector_relational.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/vector_relational.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/type_float.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_common.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../ext/quaternion_geometric.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../ext/quaternion_geometric.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_common.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_float.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/type_quat.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/../ext/quaternion_relational.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/../ext/quaternion_relational.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/type_quat.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_float_precision.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_double.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_double_precision.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_trigonometric.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_trigonometric.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_transform.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_transform.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/quaternion.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/epsilon.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/epsilon.inl vcpkg/installed/x64-linux//include/./glm/gtx/../ext/quaternion_exponential.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../ext/quaternion_exponential.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtx/norm.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtx/../gtx/component_wise.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtx/../gtx/../detail/setup.hpp vcpkg/installed/x64-linux//include/./glm/gtx/../gtx/../gtx/component_wise.inl vcpkg/installed/x64-linux//include/./glm/gtx/../gtx/norm.inl vcpkg/installed/x64-linux//include/./glm/gtx/quaternion.inl /home/user/Code/c++/BulletSimulation/class/shader/shader.h /home/user/Code/c++/BulletSimulation/class/daeload/daeload.h /home/user/Code/c++/BulletSimulation/class/datatypes/datatypes.h /home/user/Code/c++/BulletSimulation/include/./gameloop.h /home/user/Code/c++/BulletSimulation/class/sdlwrapper/window.h /home/user/Code/c++/BulletSimulation/class/sdlwrapper/renderer.h /home/user/Code/c++/BulletSimulation/class/sdlwrapper/glcontext.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/btBulletCollisionCommon.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/func_geometric.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat2x4.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./json/reader.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint3_sized.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btAxisSweep3Internal.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btQuadWord.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btStaticPlaneShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btQuickprof.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btTypedConstraint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x4_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/sdlwrapper/window.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btCollisionMargin.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/../ext/quaternion_relational.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../detail/type_quat.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ 
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/vector_relational.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../exponential.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_stdinc.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_gamecontroller.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+-I/home/user/Code/c++/BulletSimulation/class/:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x3_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtc/matrix_transform.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool4_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_misc.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btCompoundShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/detail/func_packing.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/detail/func_trigonometric.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCallback.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btMotionState.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btConvexInternalShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x3_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btCollisionShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat4x2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat2x3.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_error.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btThreads.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btConeShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleMesh.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/include/class/shader.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 99):
+	$(HIDE)$(RMDIR) $(subst /,$(PSEP),$(TARGETDIRS)) $(ERRIGNORE)
+	$(HIDE)$(RM) $(TARGET) $(ERRIGNORE)
+	@echo Cleaning done ! 
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/include/class/object.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_metal.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btConeTwistConstraint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btStridingMeshInterface.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_rect.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btSerializer.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConeShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_float2_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_timer.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/epsilon.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btBoxShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/matrix_float2x2_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/shader/shader.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_shape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/obj/class/object.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btConcaveShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btIDebugDraw.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./json/json_features.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./json/allocator.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btScalar.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/obj/./gameinit.d:
+#  Implicit rule search has been done.
+#  Last modified 2021-03-05 15:32:49.806397941
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/begin_code.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGeneric6DofSpring2Constraint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x4_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTetrahedronShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/include/./gameloop.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtc/../ext/../gtc/../ext/scalar_constants.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btJacobianEntry.h:
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_blendmode.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btMultiSphereShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtx/norm.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btOptimizedBvh.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/LinearMath/btDefaultMotionState.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_double2_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/quaternion.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtx/../gtx/component_wise.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/glm.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/matrix_double2x2_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/include/./gameinit.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/quaternion_common.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double2x4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btCapsuleShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionDispatcher.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btQuantizedBvh.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/detail/_fixes.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleCallback.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtx/../gtx/../detail/setup.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btTriangleInfoMap.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool3_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_hints.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_render.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btCylinderShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+main: /home/user/Code/c++/BulletSimulation/class/camera/camera.o /home/user/Code/c++/BulletSimulation/class/daeload/daeload.o /home/user/Code/c++/BulletSimulation/class/sdlwrapper/glcontext.o /home/user/Code/c++/BulletSimulation/class/sdlwrapper/event.o /home/user/Code/c++/BulletSimulation/class/sdlwrapper/renderer.o /home/user/Code/c++/BulletSimulation/class/sdlwrapper/window.o /home/user/Code/c++/BulletSimulation/class/sdlwrapper/main.o /home/user/Code/c++/BulletSimulation/class/shader/shader.o /home/user/Code/c++/BulletSimulation/obj/./gamemain.o /home/user/Code/c++/BulletSimulation/obj/./gameinit.o /home/user/Code/c++/BulletSimulation/obj/./gameloop.o /home/user/Code/c++/BulletSimulation/obj/class/eventhandler.o /home/user/Code/c++/BulletSimulation/obj/class/object.o /home/user/Code/c++/BulletSimulation/obj/class/debug.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 85):
+	$(HIDE)echo Linking $@
+	#$(HIDE)$(CC) $(OBJS) -o $(TARGET) $(LIBSPATH) $(LLIBS)
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./json/value.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_transform.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./json/json.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_version.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/btBulletCollisionCommon.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/sdlwrapper/glcontext.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btJacobianEntry.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/sdlwrapper/event.d:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btUniformScalingShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/../detail/func_vector_relational.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btSimpleBroadphase.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btTriangleMeshShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btFixedConstraint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/vec4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btDispatcher.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btTriangleCallback.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btQuaternion.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_locale.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionConfiguration.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/camera/camera.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/src/./gameinit.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/detail/../simd/platform.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btBoxShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../detail/../detail/../detail/_fixes.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btStaticPlaneShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat4x2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float2x4_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double3x2.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/datatypes/datatypes.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btConstraintSolver.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x3_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/../detail/type_mat3x2.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionCreateFunc.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint4_sized.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSolverBody.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat3x4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/class/shader/shader.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double4x4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/vector_relational.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btRigidBody.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/epsilon.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+directories:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := directories
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+ 
+# Load=8/32=25%, Rehash=0, Collisions=1/20=5%
+#  recipe to execute (from 'Makefile', line 95):
+	#$(HIDE)$(MKDIR) $(subst /,$(PSEP),$(TARGETDIRS)) $(ERRIGNORE)
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btTypedConstraint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_platform.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/./setup.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double2x4_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_loadso.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float2x3_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_bool4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/user/Code/c++/BulletSimulation/include/class/eventhandler.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float3x3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_double4_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../ext/scalar_uint_sized.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionCreateFunc.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btOptimizedBvh.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_float4x3_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btMinMax.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btSphereSphereCollisionAlgorithm.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtc/../ext/matrix_projection.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/type_vec4.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btAlignedAllocator.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionWorld.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btPolyhedralConvexShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btTetrahedronShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btTransformUtil.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/../mat3x3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_uint3.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_scancode.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/gtx/../gtc/../ext/../ext/quaternion_geometric.inl:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionConfiguration.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/../ext/scalar_int_sized.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btTriangleMesh.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./glm/./ext/vector_int3_sized.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./SDL2/SDL_gesture.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/bullet/LinearMath/btVector3.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+/home/user/Code/c++/BulletSimulation/obj/./gameloop.o: /home/user/Code/c++/BulletSimulation/src/./gameloop.cpp vcpkg/installed/x64-linux//include/./bullet/btBulletDynamicsCommon.h vcpkg/installed/x64-linux//include/./bullet/btBulletCollisionCommon.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionWorld.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btVector3.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btScalar.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMinMax.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btAlignedAllocator.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btTransform.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMatrix3x3.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btVector3.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btQuaternion.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btQuadWord.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionObject.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMotionState.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btTransform.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btAlignedAllocator.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btAlignedObjectArray.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionDispatcher.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btDispatcher.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btScalar.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/NarrowPhaseCollision/btPersistentManifold.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/NarrowPhaseCollision/btManifoldPoint.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btTransformUtil.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btManifoldResult.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/NarrowPhaseCollision/btDiscreteCollisionDetectorInterface.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionObjectWrapper.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionObject.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionCreateFunc.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCache.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btBroadphaseInterface.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCallback.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionObject.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btBoxShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btPolyhedralConvexShape.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMatrix3x3.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConvexInternalShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConvexShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btCollisionShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btCollisionMargin.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btAabbUtil2.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btMinMax.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btSphereShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btCapsuleShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btCylinderShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btBoxShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConeShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btStaticPlaneShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConcaveShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleCallback.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConvexHullShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleMesh.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btStridingMeshInterface.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleMeshShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btOptimizedBvh.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btQuantizedBvh.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleInfoMap.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btHashMap.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btAlignedObjectArray.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btSerializer.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btHashMap.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleMeshShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btCompoundShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btTetrahedronShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btEmptyShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btMultiSphereShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btUniformScalingShape.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btSphereSphereCollisionAlgorithm.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btActivatingCollisionAlgorithm.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btCollisionAlgorithm.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionCreateFunc.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionConfiguration.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionDispatch/btCollisionDispatcher.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btSimpleBroadphase.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCache.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btAxisSweep3.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btBroadphaseInterface.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btOverlappingPairCallback.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/BroadphaseCollision/btDbvt.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btAxisSweep3Internal.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btQuaternion.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btTransform.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btDefaultMotionState.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btMotionState.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btQuickprof.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btScalar.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btIDebugDraw.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btVector3.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btTransform.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btSerializer.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btDynamicsWorld.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/CollisionDispatch/btCollisionWorld.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btContactSolverInfo.h vcpkg/installed/x64-linux//include/bullet/LinearMath/btThreads.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btSimpleDynamicsWorld.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Dynamics/btRigidBody.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btPoint2PointConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btJacobianEntry.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btTypedConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSolverConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSolverBody.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/Dynamics/btRigidBody.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btHingeConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btConeTwistConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGeneric6DofConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSliderConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGeneric6DofSpringConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGeneric6DofConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btUniversalConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btHinge2Constraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGeneric6DofSpring2Constraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btGearConstraint.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btTypedConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btFixedConstraint.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btSolverBody.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btSolverConstraint.h vcpkg/installed/x64-linux//include/bullet/BulletCollision/NarrowPhaseCollision/btManifoldPoint.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/ConstraintSolver/btConstraintSolver.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Vehicle/btRaycastVehicle.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Vehicle/btVehicleRaycaster.h vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/Vehicle/btWheelInfo.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/Dynamics/btActionInterface.h vcpkg/installed/x64-linux//include/bullet/BulletDynamics/Dynamics/btRigidBody.h vcpkg/installed/x64-linux//include/./bullet/btBulletCollisionCommon.h /home/user/Code/c++/BulletSimulation/include/./gameloop.h /home/user/Code/c++/BulletSimulation/include/class/camera.h /home/user/Code/c++/BulletSimulation/include/class/shader.h vcpkg/installed/x64-linux//include/./tiny_obj_loader.h vcpkg/installed/x64-linux//include/./json/json.h vcpkg/installed/x64-linux//include/./json/config.h vcpkg/installed/x64-linux//include/./json/allocator.h vcpkg/installed/x64-linux//include/./json/version.h vcpkg/installed/x64-linux//include/./json/json_features.h vcpkg/installed/x64-linux//include/./json/forwards.h vcpkg/installed/x64-linux//include/./json/reader.h vcpkg/installed/x64-linux//include/./json/value.h vcpkg/installed/x64-linux//include/./json/writer.h /home/user/Code/c++/BulletSimulation/include/class/object.h vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h vcpkg/installed/x64-linux//include/./tinyxml2.h /home/user/Code/c++/BulletSimulation/include/class/daeload.h /home/user/Code/c++/BulletSimulation/include/class/debug.h vcpkg/installed/x64-linux//include/./bullet/LinearMath/btIDebugDraw.h /home/user/Code/c++/BulletSimulation/include/class/eventhandler.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btHinge2Constraint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ 
+vcpkg/installed/x64-linux//include/./glm/./ext/../detail/.././ext/matrix_double2x3_precision.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletCollision/CollisionShapes/btEmptyShape.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+vcpkg/installed/x64-linux//include/./bullet/BulletDynamics/ConstraintSolver/btHingeConstraint.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=464/1024=45%, Rehash=0, Collisions=736/1473=50%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# General ('VPATH' variable) search path:
+# /home/user/Code/c++/BulletSimulation/class/camera:/home/user/Code/c++/BulletSimulation/class/daeload:/home/user/Code/c++/BulletSimulation/class/datatype:/home/user/Code/c++/BulletSimulation/class/sdlwrapper:/home/user/Code/c++/BulletSimulation/class/shader:/home/user/Code/c++/BulletSimulation/src/.:/home/user/Code/c++/BulletSimulation/src/class
+
+# strcache buffers: 5 (3) / strings = 513 / storage = 36587 B / avg = 71 B
+# current buf: size = 8162 B / used = 4116 B / count = 49 / avg = 84 B
+# other used: total = 32471 B / count = 464 / avg = 69 B
+# other free: total = 177 B / max = 77 B / min = 13 B / avg = 44 B
+
+# strcache performance: lookups = 1111 / hit rate = 53%
+# hash-table stats:
+# Load=513/8192=6%, Rehash=0, Collisions=156/1111=14%
+# Finished Make data base on Tue Mar  9 11:58:41 2021
+
+ 

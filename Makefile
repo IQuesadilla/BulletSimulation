@@ -4,7 +4,7 @@ INCLUDEDIR := $(PROJDIR)/include
 SOURCEDIR := $(PROJDIR)/src
 CLASSDIR := $(PROJDIR)/class
 BUILDDIR := $(PROJDIR)/obj
-VCPKGDIR = ./vcpkg/installed/x64-linux/
+VCPKGDIR = $(PROJDIR)/vcpkg/installed/x64-linux/
 
 # Name of the final executable
 TARGET = main
@@ -22,9 +22,10 @@ SOURCEDIRS = $(foreach dir, $(CLASSES), $(addprefix $(CLASSDIR)/, $(dir)))
 SOURCEDIRS += $(foreach dir, $(DIRS), $(addprefix $(SOURCEDIR)/, $(dir)))
 TARGETDIRS = $(foreach dir, $(DIRS), $(addprefix $(BUILDDIR)/, $(dir)))
 INCLUDES = -I$(CLASSDIR)/
-INCLUDES += $(foreach dir, $(DIRS), $(addprefix -I$(INCLUDEDIR)/, $(dir)))
-INCLUDES += $(foreach dir, $(VCPKGIDIRS), $(addprefix -I$(VCPKGDIR)/include/, $(dir)))
+#INCLUDES += $(foreach dir, $(DIRS), $(addprefix -I$(INCLUDEDIR)/, $(dir)))
+#INCLUDES += $(foreach dir, $(VCPKGIDIRS), $(addprefix -I$(VCPKGDIR)/include/, $(dir)))
 LLIBS = $(foreach dir, $(LIBS), $(addprefix -l, $(dir)))
+-include $(INCLUDES)
 
 # Generate the GCC includes parameters by adding -I before each source folder
 #INCLUDES = $(foreach dir, $(SOURCEDIRS), $(addprefix -I, $(dir))) -I/usr/include/bullet
@@ -42,7 +43,7 @@ OBJS := $(subst $(SOURCEDIR),$(BUILDDIR),$(SOURCES:.cpp=.o))
 DEPS = $(OBJS:.o=.d)
 
 # Name the compiler
-CC = g++
+CC = gcc
 
 # OS specific part
 ifeq ($(OS),Windows_NT)
@@ -73,7 +74,7 @@ endif
 define generateRules
 $(1)/%.o: %.cpp
 	@echo Building $$@
-	$(HIDE)$(CC) -c $$(INCLUDES) -o $$(subst /,$$(PSEP),$$@) $$(subst /,$$(PSEP),$$<) -MMD
+	#$(HIDE)$(CC) -c $$(INCLUDES) -o $$(subst /,$$(PSEP),$$@) $$(subst /,$$(PSEP),$$<) -MMD
 endef
 
 .PHONY: all clean directories 
@@ -82,7 +83,7 @@ all: directories $(TARGET)
 
 $(TARGET): $(OBJS)
 	$(HIDE)echo Linking $@
-	$(HIDE)$(CC) $(OBJS) -o $(TARGET) $(LIBSPATH) $(LLIBS)
+	#$(HIDE)$(CC) $(OBJS) -o $(TARGET) $(LIBSPATH) $(LLIBS)
 
 # Include dependencies
 -include $(DEPS)
