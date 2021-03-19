@@ -1,8 +1,8 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory '/home/user/Code/c++/BulletSimulation'
-#mkdir -p  /home/user/Code/c++/BulletSimulation/obj/.  /home/user/Code/c++/BulletSimulation/obj/class 2>/dev/null
-g++    -c -o /home/user/Code/c++/BulletSimulation/class/camera/camera.o /home/user/Code/c++/BulletSimulation/class/camera/camera.cpp
+mkdir -p  /home/user/Code/c++/BulletSimulation/obj/.  /home/user/Code/c++/BulletSimulation/obj/class 2>/dev/null
  
+g++    -c -o /home/user/Code/c++/BulletSimulation/class/camera/camera.o /home/user/Code/c++/BulletSimulation/class/camera/camera.cpp
 g++    -c -o /home/user/Code/c++/BulletSimulation/class/daeload/daeload.o /home/user/Code/c++/BulletSimulation/class/daeload/daeload.cpp
 g++    -c -o /home/user/Code/c++/BulletSimulation/class/sdlwrapper/glcontext.o /home/user/Code/c++/BulletSimulation/class/sdlwrapper/glcontext.cpp
 g++    -c -o /home/user/Code/c++/BulletSimulation/class/sdlwrapper/event.o /home/user/Code/c++/BulletSimulation/class/sdlwrapper/event.cpp
@@ -26,8 +26,8 @@ echo Building /home/user/Code/c++/BulletSimulation/obj/class/eventhandler.o
  
 echo Building /home/user/Code/c++/BulletSimulation/obj/class/object.o
 #gcc -c -I/home/user/Code/c++/BulletSimulation/class/ -o /home/user/Code/c++/BulletSimulation/obj/class/object.o /home/user/Code/c++/BulletSimulation/src/class/object.cpp -MMD
+ 
 echo Building /home/user/Code/c++/BulletSimulation/obj/class/debug.o
 #gcc -c -I/home/user/Code/c++/BulletSimulation/class/ -o /home/user/Code/c++/BulletSimulation/obj/class/debug.o /home/user/Code/c++/BulletSimulation/src/class/debug.cpp -MMD
- 
 make: Leaving directory '/home/user/Code/c++/BulletSimulation'
  
