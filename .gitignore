@@ -2,3 +2,6 @@ main
 class/*
 vcpkg
 .vscode/*.log
+*.o
+obj/*
+Makefile
