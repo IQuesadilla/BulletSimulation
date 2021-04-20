@@ -68,3 +68,8 @@ void quit_callback(SDL_Event _event,arg _arg)
 
 	_gamedata->quit = false;
 }
+
+void keyboardEvent(QKeyEvent *event)
+{
+	
+}

@@ -16,4 +16,6 @@ void quit_callback(SDL_Event,arg _arg);
 
 int event_callback(void *userdata, SDL_Event *event);
 
+void keyboardEvent(QKeyEvent *event);
+
 #endif

@@ -5,7 +5,7 @@
 TEMPLATE = app
 TARGET = BulletSimulation
 INCLUDEPATH += . ./class ./include ./vcpkg/installed/x64-linux/include ./vcpkg/installed/x64-linux/include/SDL2 ./vcpkg/installed/x64-linux/include/bullet
-LIBS += -L./vcpkg/installed/x64-linux/lib -lSDL2 -lBullet3Common -lBulletCollision -lBulletDynamics -lBulletInverseDynamics -lBulletSoftBody -ljsoncpp -lSDL2main -ltinyobjloader -ltinyxml2 -ldl -lm
+LIBS += -L./vcpkg/installed/x64-linux/lib -lSDL2 -lBulletSoftBody -lBulletDynamics -lBullet3Common -lBulletCollision -lBulletInverseDynamics -lLinearMath -ljsoncpp -lSDL2main -ltinyobjloader -ltinyxml2 -ldl -lm
 
 # The following define makes your compiler warn you if you use any
 # feature of Qt which has been marked as deprecated (the exact warnings

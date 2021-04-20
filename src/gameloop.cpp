@@ -67,25 +67,7 @@ std::vector<btScalar> boxvertices = {
 
 int gameloop(gamedata &_gamedata)
 {
-	//createObject(dynamicsWorld,loadObjectFromVertices(9,12,boxvertices,10.0f,-1,1,{0.0f,1.0f,0.0f},1,false),"assets/shaders/shader",DEFAULT,0.0f,{0.0f,15.0f,0.0f});
-	//createObject(dynamicsWorld,loadObjectFromFile("assets/objects/colosseum/colosseum.obj","assets/objects/colosseum/",{1.0f,1.0f,1.0f}),"assets/shaders/shader",GROUND,0.0f,{0.0f,0.0f,0.0f});
-	//createObject(dynamicsWorld,loadObjectFromFile("assets/objects/newiron/ironman.obj","assets/objects/newiron/",{0.005f,0.005f,0.005f}),"assets/shaders/shader",PLAYER,200.0f,{2.0f,2.8f,0.0f});
-	//createObject(dynamicsWorld,"assets/objects/ironman/ironman.obj","assets/shaders/shader",PLAYER,{0.02f,0.02f,0.02f},10.0f,{0.0f,20.0f,0.0f});
-	//createObjectFromJSON(dynamicsWorld,"assets/objects/newiron.json");
-
-	#ifdef DO_DEBUG_DRAW
-	//{
-		BulletDebugDrawer_OpenGL debugDraw;
-		debugDraw.setupShader("assets/shaders/debug");
-		debugDraw.setDebugMode(DO_DEBUG_DRAW);
-		dynamicsWorld->setDebugDrawer(&debugDraw);
-	//}
-	#endif
-
-	float deltaTime, lastFrame;
-	bool reset = false;
-	int fps, lastsec, fc;
-	while (!_gamedata.quit)
+	//while (!_gamedata.quit)
 	{
 		_gamedata.dynamicsWorld->stepSimulation(1.0f / 60.0f, 10, 1.0f / 60.0f);
 
