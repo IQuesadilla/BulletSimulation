@@ -12,7 +12,6 @@ g++    -c -o /home/user/Code/c++/BulletSimulation/class/shader/shader.o /home/us
  
 echo Building /home/user/Code/c++/BulletSimulation/obj/./gamemain.o
 #gcc -c -I/home/user/Code/c++/BulletSimulation/class/ -o /home/user/Code/c++/BulletSimulation/obj/./gamemain.o /home/user/Code/c++/BulletSimulation/src/./gamemain.cpp -MMD
- 
 echo Building /home/user/Code/c++/BulletSimulation/obj/./gameinit.o
 #gcc -c -I/home/user/Code/c++/BulletSimulation/class/ -o /home/user/Code/c++/BulletSimulation/obj/./gameinit.o /home/user/Code/c++/BulletSimulation/src/./gameinit.cpp -MMD
 echo Building /home/user/Code/c++/BulletSimulation/obj/class/eventhandler.o
