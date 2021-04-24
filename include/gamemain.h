@@ -31,6 +31,8 @@ public:
     explicit WindowWidget(QWidget *parent = 0):QWidget(parent);
     void setGLContextM(QWidget *glcontext);
 
+	eventhandler *_eventhandler;
+
 protected:
     void handleButton();
     void keyPressEvent(QKeyEvent *event) override;
@@ -55,7 +57,10 @@ struct gamedata
 	gamedata(int argc, char **argv);
 	~gamedata();
 
-	event _event;
+	int gameinit(int argc, char **argv);
+	int gameloop();
+
+	eventhandler *_eventhandler;
 	Camera _camera;
 
 	QApplication *app;

@@ -8,7 +8,7 @@
 #include <bullet/btBulletCollisionCommon.h>
 //#include <Bullet3OpenCL/BroadphaseCollision/b3GpuGridBroadphase.h>
 
-#include "gameloop.h"
+#include "gamemain.h"
 #include "camera/camera.h"
 #include "shader/shader.h"
 #include "sdlwrapper/window.h"

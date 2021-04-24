@@ -26,7 +26,7 @@ void WindowWidget::handleButton()
 
 void WindowWidget::keyPressEvent(QKeyEvent *event) override
 {
-	keyboardEvent(event);
+	_eventhandler->keyboardEvent(event);
 }
 
 GLWidget::GLWidget()
@@ -53,11 +53,6 @@ void GLWidget::paintGL() override
 	glClear(GL_COLOR_BUFFER_BIT);
 }
 
-gamedata::gamedata(int argc, char **argv)
-{
-	gameinit(*this,argc,argv);
-}
-
 gamedata::~gamedata()
 {
 	gamekill();
@@ -66,6 +61,6 @@ gamedata::~gamedata()
 int main(int argc, char **argv)
 {
 	gamedata _gamedata (argc,argv);
-	gameloop(_gamedata);
+	//_gamedata.gameloop();
 	return _gamedata.app->exec();
 }
