@@ -1157,9 +1157,7 @@ gameinit.o: src/gameinit.cpp include/gameinit.h \
 		vcpkg/installed/x64-linux/include/SDL2/SDL_misc.h \
 		include/gamemain.h \
 		include/gameloop.h \
-		class/sdlwrapper/window.h \
-		class/sdlwrapper/renderer.h \
-		class/datatypes/datatypes.h \
+		class/camera/camera.h \
 		vcpkg/installed/x64-linux/include/glm/glm.hpp \
 		vcpkg/installed/x64-linux/include/glm/detail/_fixes.hpp \
 		vcpkg/installed/x64-linux/include/glm/detail/setup.hpp \
@@ -1311,9 +1309,6 @@ gameinit.o: src/gameinit.cpp include/gameinit.h \
 		vcpkg/installed/x64-linux/include/glm/detail/func_integer.inl \
 		vcpkg/installed/x64-linux/include/glm/detail/func_integer_simd.inl \
 		vcpkg/installed/x64-linux/include/glm/simd/integer.h \
-		class/sdlwrapper/glcontext.h \
-		class/sdlwrapper/event.h \
-		class/camera/camera.h \
 		vcpkg/installed/x64-linux/include/glm/gtc/matrix_transform.hpp \
 		vcpkg/installed/x64-linux/include/glm/ext/matrix_projection.hpp \
 		vcpkg/installed/x64-linux/include/glm/gtc/constants.hpp \
@@ -1326,6 +1321,8 @@ gameinit.o: src/gameinit.cpp include/gameinit.h \
 		vcpkg/installed/x64-linux/include/glm/ext/matrix_transform.hpp \
 		vcpkg/installed/x64-linux/include/glm/ext/matrix_transform.inl \
 		vcpkg/installed/x64-linux/include/glm/gtc/matrix_transform.inl \
+		include/class/eventhandler.h \
+		class/sdlwrapper/event.h \
 		vcpkg/installed/x64-linux/include/bullet/BulletCollision/btBulletCollisionCommon.h \
 		vcpkg/installed/x64-linux/include/bullet/BulletCollision/CollisionDispatch/btCollisionWorld.h \
 		vcpkg/installed/x64-linux/include/bullet/LinearMath/btVector3.h \
@@ -1408,7 +1405,6 @@ gameinit.o: src/gameinit.cpp include/gameinit.h \
 		vcpkg/installed/x64-linux/include/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h \
 		vcpkg/installed/x64-linux/include/bullet/BulletDynamics/Dynamics/btDynamicsWorld.h \
 		vcpkg/installed/x64-linux/include/bullet/LinearMath/btThreads.h \
-		include/class/eventhandler.h \
 		vcpkg/installed/x64-linux/include/bullet/btBulletCollisionCommon.h \
 		vcpkg/installed/x64-linux/include/bullet/btBulletDynamicsCommon.h \
 		vcpkg/installed/x64-linux/include/bullet/BulletDynamics/Dynamics/btSimpleDynamicsWorld.h \
@@ -1475,7 +1471,8 @@ gameinit.o: src/gameinit.cpp include/gameinit.h \
 		vcpkg/installed/x64-linux/include/glm/gtx/norm.inl \
 		vcpkg/installed/x64-linux/include/glm/gtx/quaternion.inl \
 		class/shader/shader.h \
-		class/daeload/daeload.h
+		class/daeload/daeload.h \
+		class/datatypes/datatypes.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gameinit.o src/gameinit.cpp
 
 gameloop.o: src/gameloop.cpp vcpkg/installed/x64-linux/include/SDL2/SDL.h \
@@ -1844,10 +1841,10 @@ gameloop.o: src/gameloop.cpp vcpkg/installed/x64-linux/include/SDL2/SDL.h \
 		class/shader/shader.h \
 		class/daeload/daeload.h \
 		class/datatypes/datatypes.h \
+		vcpkg/installed/x64-linux/include/bullet/BulletCollision/btBulletCollisionCommon.h \
 		class/sdlwrapper/window.h \
 		class/sdlwrapper/renderer.h \
 		class/sdlwrapper/glcontext.h \
-		vcpkg/installed/x64-linux/include/bullet/BulletCollision/btBulletCollisionCommon.h \
 		include/class/debug.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gameloop.o src/gameloop.cpp
 
@@ -2217,9 +2214,6 @@ gamemain.o: src/gamemain.cpp include/gamemain.h \
 		class/daeload/daeload.h \
 		class/datatypes/datatypes.h \
 		include/gameloop.h \
-		class/sdlwrapper/window.h \
-		class/sdlwrapper/renderer.h \
-		class/sdlwrapper/glcontext.h \
 		vcpkg/installed/x64-linux/include/bullet/BulletCollision/btBulletCollisionCommon.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gamemain.o src/gamemain.cpp
 
@@ -4222,9 +4216,6 @@ eventhandler.o: src/class/eventhandler.cpp include/class/eventhandler.h \
 		class/daeload/daeload.h \
 		class/datatypes/datatypes.h \
 		include/gameloop.h \
-		class/sdlwrapper/window.h \
-		class/sdlwrapper/renderer.h \
-		class/sdlwrapper/glcontext.h \
 		vcpkg/installed/x64-linux/include/bullet/BulletCollision/btBulletCollisionCommon.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o eventhandler.o src/class/eventhandler.cpp
 
