@@ -85,7 +85,7 @@ int gamedata::gameloop()
 			{
 				lastsec = int(currentFrame);
 				fps = fc; fc = 0;
-				std::cout << fps << std::endl;
+				//std::cout << fps << std::endl;
 			}
 			fc++;
 

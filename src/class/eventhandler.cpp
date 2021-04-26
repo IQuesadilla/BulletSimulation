@@ -76,5 +76,7 @@ eventhandler::eventhandler (gamedata *_gamedataptr)
 
 void eventhandler::keyboardEvent(QKeyEvent *event)
 {
+	int key = event->key();
+	std::cout << (key == Qt::Key_R) << ' ' << key << std::endl;
 	_gamedata->gameloop();
 }
