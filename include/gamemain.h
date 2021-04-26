@@ -3,12 +3,10 @@
 #define GL_GLEXT_PROTOTYPES
 #define GLM_ENABLE_EXPERIMENTAL
 
-#include "gameinit.h"
-#include "gameloop.h"
-
 #include "camera/camera.h"
 
 #include "class/eventhandler.h"
+#include "class/object.h"
 
 #include "bullet/BulletCollision/btBulletCollisionCommon.h"
 #include "bullet/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h"
@@ -25,10 +23,19 @@
 #define WINDOW_WIDTH 640
 #define WINDOW_HEIGHT 480
 
+struct eventhandler;
+
 class WindowWidget : public QWidget
 {
 public:
-    explicit WindowWidget(QWidget *parent = 0):QWidget(parent);
+    explicit WindowWidget(QWidget *parent = 0):QWidget(parent)
+	{
+		setLayout(&mainLayout);
+
+		setWindowTitle("small penis");
+		resize(WINDOW_WIDTH, WINDOW_HEIGHT);
+		show();
+	};
     void setGLContextM(QWidget *glcontext);
 
 	eventhandler *_eventhandler;
@@ -38,7 +45,6 @@ protected:
     void keyPressEvent(QKeyEvent *event) override;
 
     QHBoxLayout mainLayout;
-    QPushButton *m_button;
 };
 
 class GLWidget : public QOpenGLWidget, protected QOpenGLFunctions
@@ -54,7 +60,7 @@ protected:
 
 struct gamedata
 {
-	gamedata(int argc, char **argv);
+	gamedata(int argc, char **argv){gameinit(argc,argv);};
 	~gamedata();
 
 	int gameinit(int argc, char **argv);

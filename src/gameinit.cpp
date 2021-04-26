@@ -2,15 +2,17 @@
 
 int gamedata::gameinit(int argc, char **argv)
 {
-	//SDL_Init(SDL_INIT_EVERYTHING);
+	SDL_Init(SDL_INIT_EVERYTHING);
 	//SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
     //SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
     //SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 	//window _window ("win", WINDOWPOS_UNDEFINED, {WINDOW_WIDTH, WINDOW_HEIGHT}, SDL_WINDOW_OPENGL|SDL_WINDOW_RESIZABLE);
 	//glcontext _glcontext (_window);
 	//glViewport (0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+	app = new QApplication(argc, argv);
 	window = new WindowWidget();
 	glcontext = new GLWidget();
+	_eventhandler = new eventhandler(this);
 	window->setGLContextM(glcontext);
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LESS);
@@ -27,7 +29,7 @@ int gamedata::gameinit(int argc, char **argv)
 	//_event.addCallback(SDL_MOUSEMOTION,mouse_callback,&_gamedata);
 
 	collisionConfiguration = new btDefaultCollisionConfiguration();
-	medata.dispatcher = new btCollisionDispatcher(collisionConfiguration);
+	dispatcher = new btCollisionDispatcher(collisionConfiguration);
 	overlappingPairCache = new btAxisSweep3({0.0f,0.0f,0.0f},{500.0f,500.0f,500.0f});
 	solver = new btSequentialImpulseConstraintSolver;
 	

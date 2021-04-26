@@ -1,6 +1,6 @@
 #define GL_GLEXT_PROTOTYPES
 #define GLM_ENABLE_EXPERIMENTAL
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include <GL/gl.h>
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
@@ -65,13 +65,13 @@ std::vector<btScalar> boxvertices = {
 	1.0f, -1.0f,  1.0f
 };
 
-int gameloop(gamedata &_gamedata)
+int gamedata::gameloop()
 {
-	//while (!_gamedata.quit)
+	//while (!quit)
 	{
-		_gamedata.dynamicsWorld->stepSimulation(1.0f / 60.0f, 10, 1.0f / 60.0f);
+		dynamicsWorld->stepSimulation(1.0f / 60.0f, 10, 1.0f / 60.0f);
 
-		_gamedata._event.updateCallbacks();
+		//_event.updateCallbacks();
 
 		glClearColor (0.2f,0.2f,0.2f,1.0f);
 		glClear (GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
@@ -85,34 +85,34 @@ int gameloop(gamedata &_gamedata)
 			{
 				lastsec = int(currentFrame);
 				fps = fc; fc = 0;
-				SDL_Log("%d",fps);
+				std::cout << fps << std::endl;
 			}
 			fc++;
 
-			_gamedata._camera.InputUpdate(deltaTime);
+			_camera.InputUpdate(deltaTime);
 		}
 		
-		for (int j = 0; j < _gamedata.dynamicsWorld->getNumCollisionObjects(); j++)
+		for (int j = 0; j < dynamicsWorld->getNumCollisionObjects(); j++)
 		{
-			btCollisionObject *obj = _gamedata.dynamicsWorld->getCollisionObjectArray()[j];
+			btCollisionObject *obj = dynamicsWorld->getCollisionObjectArray()[j];
 			btCollisionShape *shape = obj->getCollisionShape();
 			shapeobject *object = (shapeobject*)shape->getUserPointer();
 
 			object->shader->use();
 			object->shader->setVec3("objectColor", 0.0f, 0.0f, 0.5f);
 			object->shader->setVec3("lightColor",  0.0f, 0.0f, 1.0f);
-			object->shader->setVec3("lightPos",_gamedata._camera.Position);
-			object->shader->setVec3("viewPos",_gamedata._camera.Position);	
+			object->shader->setVec3("lightPos",_camera.Position);
+			object->shader->setVec3("viewPos",_camera.Position);	
 		}
 
-		glm::mat4 projection = glm::perspective(glm::radians(_gamedata._camera.Zoom), _gamedata._camera.viewsizex / _gamedata._camera.viewsizey, 0.1f, 1000.0f);
-		glm::mat4 view = _gamedata._camera.GetViewMatrix();
+		glm::mat4 projection = glm::perspective(glm::radians(_camera.Zoom), _camera.viewsizex / _camera.viewsizey, 0.1f, 1000.0f);
+		glm::mat4 view = _camera.GetViewMatrix();
 
-		_gamedata.dynamicsWorld->updateAabbs();
+		dynamicsWorld->updateAabbs();
 		//SDL_Log("%d ",dynamicsWorld->getNumCollisionObjects());
-		for (int j = 0; j < _gamedata.dynamicsWorld->getNumCollisionObjects(); j++)
+		for (int j = 0; j < dynamicsWorld->getNumCollisionObjects(); j++)
 		{
-			btCollisionObject* obj = _gamedata.dynamicsWorld->getCollisionObjectArray()[j];
+			btCollisionObject* obj = dynamicsWorld->getCollisionObjectArray()[j];
 			update_object_graphics(obj,projection,view,reset);
 			btTransform trans = getTransform(obj);
 
@@ -160,7 +160,7 @@ int gameloop(gamedata &_gamedata)
 		#endif
 
 		if (reset) reset = false;
-		_gamedata._glcontext.update();
+		//_glcontext.update();
 	}
 
 	return 0;

@@ -6,8 +6,9 @@
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/vcpkg/installed/x64-linux/include",
                 "${workspaceFolder}/vcpkg/installed/x64-linux/include/*",
+                "${workspaceFolder}/vcpkg/installed/x64-linux/include/SDL2/",
                 "${workspaceFolder}/include",
-				"${workspaceFolder}/class",
+                "${workspaceFolder}/class",
                 "/usr/include/SDL2"
             ],
             "defines": [],

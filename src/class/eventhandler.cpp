@@ -74,7 +74,7 @@ eventhandler::eventhandler (gamedata *_gamedataptr)
 	_gamedata = _gamedataptr;
 }
 
-void keyboardEvent(QKeyEvent *event)
+void eventhandler::keyboardEvent(QKeyEvent *event)
 {
-	
+	_gamedata->gameloop();
 }

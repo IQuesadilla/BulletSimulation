@@ -5,9 +5,14 @@
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_log.h>
 
+#include <QtWidgets/QtWidgets>
+
+
 #include "camera/camera.h"
 #include "sdlwrapper/event.h"
 #include "gamemain.h"
+
+struct gamedata;
 
 void keyboard_callback(SDL_Event,arg _arg);
 void click_callback(SDL_Event,arg _arg);
@@ -25,6 +30,6 @@ public:
 
 private:
 	gamedata *_gamedata;
-}
+};
 
 #endif
