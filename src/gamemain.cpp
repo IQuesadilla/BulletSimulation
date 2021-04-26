@@ -5,11 +5,6 @@ void WindowWidget::setGLContextM(QWidget *glcontext)
 	mainLayout.addWidget(glcontext);
 }
 
-void WindowWidget::handleButton()
-{
-	setWindowTitle("big penis");
-}
-
 void WindowWidget::keyPressEvent(QKeyEvent *event)
 {
 	_eventhandler->keyboardEvent(event,true);

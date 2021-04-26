@@ -41,7 +41,6 @@ public:
 	eventhandler *_eventhandler;
 
 protected:
-    void handleButton();
     void keyPressEvent(QKeyEvent *event) override;
 	void keyReleaseEvent(QKeyEvent *event) override;
 
