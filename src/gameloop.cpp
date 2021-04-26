@@ -76,20 +76,15 @@ int gamedata::gameloop()
 		glClearColor (0.2f,0.2f,0.2f,1.0f);
 		glClear (GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
+		
 		{
-			float currentFrame = (float)SDL_GetTicks()/1000.0f;
-			deltaTime = currentFrame - lastFrame;
-			lastFrame = currentFrame;
+			float deltaTime = std::chrono::duration_cast<std::chrono::milliseconds>(timer.now() - start).count() / 1000.0f;
+			start = timer.now();
 
-			if (int(currentFrame) > lastsec)
-			{
-				lastsec = int(currentFrame);
-				fps = fc; fc = 0;
-				//std::cout << fps << std::endl;
-			}
-			fc++;
+			window->setWindowTitle(QString::fromStdString(std::to_string(int(1.0f / deltaTime))));
 
 			_camera.InputUpdate(deltaTime);
+			
 		}
 		
 		for (int j = 0; j < dynamicsWorld->getNumCollisionObjects(); j++)
@@ -159,7 +154,7 @@ int gamedata::gameloop()
 		debugDraw.updateDraw();
 		#endif
 
-		if (reset) reset = false;
+		//if (reset) reset = false;
 		//_glcontext.update();
 	}
 

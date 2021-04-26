@@ -1,47 +1,5 @@
 #include "class/eventhandler.h"
 
-void keyboard_callback (SDL_Event _event, arg _arg)
-{
-	gamedata *_gamedata = static_cast<gamedata*>(_arg);
-
-	bool down;
-	if (_event.type == SDL_KEYDOWN)
-		down = true;
-	else
-		down = false;
-	
-	switch (_event.key.keysym.sym)
-    {
-        case SDLK_w:
-            _gamedata->_camera.ProcessKeyboard(FORWARD, down);
-        break;
-
-        case SDLK_s:
-            _gamedata->_camera.ProcessKeyboard(BACKWARD, down);
-        break;
-
-        case SDLK_a:
-            _gamedata->_camera.ProcessKeyboard(LEFT, down);
-        break;
-
-        case SDLK_d:
-            _gamedata->_camera.ProcessKeyboard(RIGHT, down);
-        break;
-
-        case SDLK_q:
-            _gamedata->_camera.ProcessKeyboard(UP, down);
-        break;
-
-        case SDLK_e:
-            _gamedata->_camera.ProcessKeyboard(DOWN, down);
-        break;
-
-        case SDLK_ESCAPE:
-            quit_callback(_event,_arg);
-        break;
-    };
-}
-
 void mouse_callback(SDL_Event _event, arg _arg)
 {
 	gamedata *_gamedata = static_cast<gamedata*>(_arg);
@@ -74,9 +32,47 @@ eventhandler::eventhandler (gamedata *_gamedataptr)
 	_gamedata = _gamedataptr;
 }
 
-void eventhandler::keyboardEvent(QKeyEvent *event)
+void eventhandler::keyboardEvent(QKeyEvent *event, bool down)
 {
 	int key = event->key();
 	std::cout << (key == Qt::Key_R) << ' ' << key << std::endl;
+
+	switch (key)
+    {
+        case Qt::Key_W:
+            _gamedata->_camera.ProcessKeyboard(FORWARD, down);
+        break;
+
+        case Qt::Key_S:
+            _gamedata->_camera.ProcessKeyboard(BACKWARD, down);
+        break;
+
+        case Qt::Key_A:
+            _gamedata->_camera.ProcessKeyboard(LEFT, down);
+        break;
+
+        case Qt::Key_D:
+            _gamedata->_camera.ProcessKeyboard(RIGHT, down);
+        break;
+
+        case Qt::Key_Q:
+            _gamedata->_camera.ProcessKeyboard(UP, down);
+        break;
+
+        case Qt::Key_E:
+            _gamedata->_camera.ProcessKeyboard(DOWN, down);
+        break;
+    };
+
 	_gamedata->gameloop();
+}
+
+void eventhandler::mouseEvent()
+{
+	
+}
+
+void eventhandler::quitEvent()
+{
+	_gamedata->gamequit();
 }

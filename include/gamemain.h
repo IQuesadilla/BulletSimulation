@@ -43,6 +43,7 @@ public:
 protected:
     void handleButton();
     void keyPressEvent(QKeyEvent *event) override;
+	void keyReleaseEvent(QKeyEvent *event) override;
 
     QHBoxLayout mainLayout;
 };
@@ -65,6 +66,7 @@ struct gamedata
 
 	int gameinit(int argc, char **argv);
 	int gameloop();
+	int gamequit(){};
 
 	eventhandler *_eventhandler;
 	Camera _camera;
@@ -79,11 +81,14 @@ struct gamedata
 	btSequentialImpulseConstraintSolver *solver;
 	btDiscreteDynamicsWorld *dynamicsWorld;
 
+	std::chrono::_V2::system_clock::time_point start;
+	std::chrono::high_resolution_clock timer;
+
 	bool firstMouse = true;
 	int lastX, lastY;
 	bool quit = false;
 
-	float deltaTime, lastFrame;
-	bool reset = false;
-	int fps, lastsec, fc;
+	//float deltaTime, lastFrame;
+	//bool reset = false;
+	//int fps, lastsec, fc;
 };

@@ -12,7 +12,12 @@ void WindowWidget::handleButton()
 
 void WindowWidget::keyPressEvent(QKeyEvent *event)
 {
-	_eventhandler->keyboardEvent(event);
+	_eventhandler->keyboardEvent(event,true);
+}
+
+void WindowWidget::keyReleaseEvent(QKeyEvent *event)
+{
+	_eventhandler->keyboardEvent(event,false);
 }
 
 GLWidget::GLWidget()
@@ -25,7 +30,7 @@ GLWidget::GLWidget()
 
 void GLWidget::paintEvent(QPaintEvent *event)
 {
-
+	std::cout << "paintEvent" << std::endl;
 }
 
 void GLWidget::initializeGL()
@@ -37,6 +42,7 @@ void GLWidget::paintGL()
 {
 	//glClearColor(1.0f,1.0f,1.0f,1.0f);
 	//glClear(GL_COLOR_BUFFER_BIT);
+	std::cout << "paintGL" << std::endl;
 }
 
 gamedata::~gamedata()
@@ -47,6 +53,5 @@ gamedata::~gamedata()
 int main(int argc, char **argv)
 {
 	gamedata _gamedata (argc,argv);
-	//_gamedata.gameloop();
 	return _gamedata.app->exec();
 }

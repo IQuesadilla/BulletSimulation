@@ -2,13 +2,6 @@
 
 int gamedata::gameinit(int argc, char **argv)
 {
-	SDL_Init(SDL_INIT_EVERYTHING);
-	//SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
-    //SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
-    //SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
-	//window _window ("win", WINDOWPOS_UNDEFINED, {WINDOW_WIDTH, WINDOW_HEIGHT}, SDL_WINDOW_OPENGL|SDL_WINDOW_RESIZABLE);
-	//glcontext _glcontext (_window);
-	//glViewport (0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
 	app = new QApplication(argc, argv);
 	window = new WindowWidget();
 	glcontext = new GLWidget();
@@ -16,7 +9,6 @@ int gamedata::gameinit(int argc, char **argv)
 	window->setGLContextM(glcontext);
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LESS);
-	//SDL_SetRelativeMouseMode(SDL_TRUE);
 	glEnable(GL_PROGRAM_POINT_SIZE);
 
 	_camera = *new Camera(glm::vec3(0.0f,30.0f,5.0f));
@@ -54,6 +46,7 @@ int gamedata::gameinit(int argc, char **argv)
 	//}
 	#endif
 
+	std::cout << "Initialized" << std::endl;
 
 	return 1;
 }
