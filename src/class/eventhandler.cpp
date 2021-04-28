@@ -35,7 +35,6 @@ eventhandler::eventhandler (gamedata *_gamedataptr)
 void eventhandler::keyboardEvent(QKeyEvent *event, bool down)
 {
 	int key = event->key();
-	std::cout << (key == Qt::Key_R) << ' ' << key << std::endl;
 
 	switch (key)
     {
@@ -64,12 +63,30 @@ void eventhandler::keyboardEvent(QKeyEvent *event, bool down)
         break;
     };
 
-	_gamedata->gameloop();
+	_gamedata->glcontext->update();
 }
 
-void eventhandler::mouseEvent()
+void eventhandler::mouseEvent(QMouseEvent *event)
 {
+	auto mpos = event->pos();
 	
+	if (_gamedata->firstMouse)
+    {
+        _gamedata->lastX = mpos.x();
+        _gamedata->lastY = mpos.y();
+        _gamedata->firstMouse = false;
+    }
+
+    float xoffset = _gamedata->lastX - mpos.x();
+    float yoffset = mpos.y() - _gamedata->lastY;
+
+    _gamedata->lastX = mpos.x();
+    _gamedata->lastY = mpos.y();
+
+	std::cout << mpos.x() << ' ' << mpos.y() << ' ' << xoffset << ' ' << yoffset << std::endl;
+	_gamedata->_camera.ProcessMouseMovement(xoffset, yoffset);
+
+	_gamedata->glcontext->update();
 }
 
 void eventhandler::quitEvent()

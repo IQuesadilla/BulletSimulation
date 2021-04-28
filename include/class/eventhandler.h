@@ -16,7 +16,7 @@ class eventhandler
 public:
 	eventhandler(gamedata *_gamedataptr);
 	void keyboardEvent(QKeyEvent *event, bool down);
-	void mouseEvent();
+	void mouseEvent(QMouseEvent *event);
 	void quitEvent();
 
 private:

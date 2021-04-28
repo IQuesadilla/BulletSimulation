@@ -24,6 +24,7 @@
 #define WINDOW_HEIGHT 480
 
 struct eventhandler;
+struct gamedata;
 
 class WindowWidget : public QWidget
 {
@@ -43,6 +44,9 @@ public:
 protected:
     void keyPressEvent(QKeyEvent *event) override;
 	void keyReleaseEvent(QKeyEvent *event) override;
+	void mouseMoveEvent(QMouseEvent *event) override;
+	void mousePressEvent(QMouseEvent *event) override;
+	void mouseReleaseEvent(QMouseEvent *event) override;
 
     QHBoxLayout mainLayout;
 };
@@ -50,12 +54,15 @@ protected:
 class GLWidget : public QOpenGLWidget, protected QOpenGLFunctions
 {
 public:
-    GLWidget();
+    GLWidget(gamedata *_gamedataptr);
+
+	gamedata *_gamedata;
 
 protected:
     void paintEvent(QPaintEvent *event) override;
     void initializeGL() override;
     void paintGL() override;
+	void resizeGL(int w, int h) override;
 };
 
 struct gamedata
@@ -64,7 +71,7 @@ struct gamedata
 	~gamedata();
 
 	int gameinit(int argc, char **argv);
-	int gameloop();
+	int gameloop(QPaintEvent *event);
 	int gamequit(){};
 
 	eventhandler *_eventhandler;

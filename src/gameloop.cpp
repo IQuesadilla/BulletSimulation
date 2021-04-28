@@ -20,52 +20,7 @@
 
 //#define DO_DEBUG_DRAW btIDebugDraw::DebugDrawModes::DBG_DrawAabb | btIDebugDraw::DebugDrawModes::DBG_DrawWireframe
 
-std::vector<btScalar> boxvertices = {
-	// positions          
-	-1.0f,  1.0f, -1.0f,
-	-1.0f, -1.0f, -1.0f,
-	1.0f, -1.0f, -1.0f,
-	1.0f, -1.0f, -1.0f,
-	1.0f,  1.0f, -1.0f,
-	-1.0f,  1.0f, -1.0f,
-
-	-1.0f, -1.0f,  1.0f,
-	-1.0f, -1.0f, -1.0f,
-	-1.0f,  1.0f, -1.0f,
-	-1.0f,  1.0f, -1.0f,
-	-1.0f,  1.0f,  1.0f,
-	-1.0f, -1.0f,  1.0f,
-
-	1.0f, -1.0f, -1.0f,
-	1.0f, -1.0f,  1.0f,
-	1.0f,  1.0f,  1.0f,
-	1.0f,  1.0f,  1.0f,
-	1.0f,  1.0f, -1.0f,
-	1.0f, -1.0f, -1.0f,
-
-	-1.0f, -1.0f,  1.0f,
-	-1.0f,  1.0f,  1.0f,
-	1.0f,  1.0f,  1.0f,
-	1.0f,  1.0f,  1.0f,
-	1.0f, -1.0f,  1.0f,
-	-1.0f, -1.0f,  1.0f,
-
-	-1.0f,  1.0f, -1.0f,
-	1.0f,  1.0f, -1.0f,
-	1.0f,  1.0f,  1.0f,
-	1.0f,  1.0f,  1.0f,
-	-1.0f,  1.0f,  1.0f,
-	-1.0f,  1.0f, -1.0f,
-
-	-1.0f, -1.0f, -1.0f,
-	-1.0f, -1.0f,  1.0f,
-	1.0f, -1.0f, -1.0f,
-	1.0f, -1.0f, -1.0f,
-	-1.0f, -1.0f,  1.0f,
-	1.0f, -1.0f,  1.0f
-};
-
-int gamedata::gameloop()
+int gamedata::gameloop(QPaintEvent *event)
 {
 	//while (!quit)
 	{
@@ -114,8 +69,8 @@ int gamedata::gameloop()
 			btCollisionShape *shape = obj->getCollisionShape();
 			shapeobject *object = (shapeobject*)shape->getUserPointer();
 			{
-				if (reset)
-					obj->getWorldTransform().setOrigin(object->resettrans.getOrigin());
+				//if (reset)
+				//	obj->getWorldTransform().setOrigin(object->resettrans.getOrigin());
 				object->shader->use();
 				object->update();
 
@@ -143,6 +98,8 @@ int gamedata::gameloop()
 
 			//SDL_Log("world pos object %d = %f,%f,%f", j, float(trans.getOrigin().getX()), float(trans.getOrigin().getY()), float(trans.getOrigin().getZ()));
 		}
+
+		//window->update();
 
 		#ifdef DO_DEBUG_DRAW
 		dynamicsWorld->debugDrawWorld();
