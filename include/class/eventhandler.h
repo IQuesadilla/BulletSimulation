@@ -6,7 +6,7 @@
 
 
 #include "camera/camera.h"
-#include "sdlwrapper/event.h"
+//#include "sdlwrapper/event.h"
 #include "gamemain.h"
 
 struct gamedata;

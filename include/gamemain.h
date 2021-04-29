@@ -19,7 +19,6 @@
 #include <QtOpenGL/QGL>
 #include <iostream>
 
-
 #define WINDOW_WIDTH 640
 #define WINDOW_HEIGHT 480
 
@@ -72,6 +71,7 @@ struct gamedata
 
 	int gameinit(int argc, char **argv);
 	int gameloop(QPaintEvent *event);
+	int gamedraw();
 	int gamequit(){};
 
 	eventhandler *_eventhandler;

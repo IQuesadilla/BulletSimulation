@@ -1,6 +1,6 @@
 {
     "type": "file",
-    "mass": 0.0,
+    "mass": 1.0,
     "friction": 1.0,
     "modelpath": "assets/models/newiron",
     "scale": {

@@ -34,32 +34,33 @@ GLWidget::GLWidget(gamedata *_gamedataptr)
 {
 	_gamedata = _gamedataptr;
 
-	resize(WINDOW_WIDTH, WINDOW_HEIGHT);
-	show();
-
 	//paintGL();
 }
 
 void GLWidget::paintEvent(QPaintEvent *event)
 {
 	_gamedata->gameloop(event);
+	_gamedata->gamedraw();
 }
 
 void GLWidget::initializeGL()
 {
 	initializeOpenGLFunctions();
+	resize(WINDOW_WIDTH, WINDOW_HEIGHT);
+	show();
+	std::cout << "GL INIT" << std::endl;
 }
 
 void GLWidget::paintGL()
 {
-	//glClearColor(1.0f,1.0f,1.0f,1.0f);
-	//glClear(GL_COLOR_BUFFER_BIT);
-	std::cout << "paintGL" << std::endl;
+
 }
 
 void GLWidget::resizeGL(int w, int h)
 {
 	std::cout << "resizeGL " << w << ' ' << h << std::endl;
+	resize(w,h);
+	_gamedata->_camera.setViewSize(w,h);
 }
 
 gamedata::~gamedata()

@@ -1,5 +1,5 @@
 #include "class/eventhandler.h"
-
+/*
 void mouse_callback(SDL_Event _event, arg _arg)
 {
 	gamedata *_gamedata = static_cast<gamedata*>(_arg);
@@ -26,7 +26,7 @@ void quit_callback(SDL_Event _event,arg _arg)
 
 	_gamedata->quit = false;
 }
-
+*/
 eventhandler::eventhandler (gamedata *_gamedataptr)
 {
 	_gamedata = _gamedataptr;

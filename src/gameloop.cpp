@@ -1,7 +1,7 @@
 #define GL_GLEXT_PROTOTYPES
 #define GLM_ENABLE_EXPERIMENTAL
-#include <SDL.h>
-#include <GL/gl.h>
+//#include <SDL.h>
+//#include <GL/gl.h>
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
 #include <bullet/btBulletDynamicsCommon.h>
@@ -24,11 +24,12 @@ int gamedata::gameloop(QPaintEvent *event)
 {
 	//while (!quit)
 	{
+		glcontext->makeCurrent();
 		dynamicsWorld->stepSimulation(1.0f / 60.0f, 10, 1.0f / 60.0f);
 
 		//_event.updateCallbacks();
 
-		glClearColor (0.2f,0.2f,0.2f,1.0f);
+		glClearColor (0.0f,0.0f,0.0f,1.0f);
 		glClear (GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
 		
@@ -55,50 +56,6 @@ int gamedata::gameloop(QPaintEvent *event)
 			object->shader->setVec3("viewPos",_camera.Position);	
 		}
 
-		glm::mat4 projection = glm::perspective(glm::radians(_camera.Zoom), _camera.viewsizex / _camera.viewsizey, 0.1f, 1000.0f);
-		glm::mat4 view = _camera.GetViewMatrix();
-
-		dynamicsWorld->updateAabbs();
-		//SDL_Log("%d ",dynamicsWorld->getNumCollisionObjects());
-		for (int j = 0; j < dynamicsWorld->getNumCollisionObjects(); j++)
-		{
-			btCollisionObject* obj = dynamicsWorld->getCollisionObjectArray()[j];
-			update_object_graphics(obj,projection,view,reset);
-			btTransform trans = getTransform(obj);
-
-			btCollisionShape *shape = obj->getCollisionShape();
-			shapeobject *object = (shapeobject*)shape->getUserPointer();
-			{
-				//if (reset)
-				//	obj->getWorldTransform().setOrigin(object->resettrans.getOrigin());
-				object->shader->use();
-				object->update();
-
-				object->shader->setMat4("projection", projection);
-				object->shader->setMat4("view",view);
-
-				glm::mat4 model = glm::mat4(1.0f);
-				model = glm::scale(model, glm::vec3(shape->getLocalScaling().getX(),
-				 									shape->getLocalScaling().getY(),
-				 									shape->getLocalScaling().getZ()));
-				model = glm::translate(model, glm::vec3(trans.getOrigin().getX() / shape->getLocalScaling().getX(),
-														trans.getOrigin().getY() / shape->getLocalScaling().getY(),
-														trans.getOrigin().getZ() / shape->getLocalScaling().getZ()));
-				model = model * glm::toMat4(glm::quat(trans.getRotation().getW(),
-													trans.getRotation().getX(),
-													trans.getRotation().getY(),
-													trans.getRotation().getZ()));
-				//glm::mat4 model = glm::mat4(1.0f);;
-				//trans.getOpenGLMatrix(&model[0][0]);
-				object->shader->setMat4("model",model);
-
-				glBindVertexArray(object->VAO);
-				glDrawArrays (GL_TRIANGLES, 0, object->vertexcount);
-			}
-
-			//SDL_Log("world pos object %d = %f,%f,%f", j, float(trans.getOrigin().getX()), float(trans.getOrigin().getY()), float(trans.getOrigin().getZ()));
-		}
-
 		//window->update();
 
 		#ifdef DO_DEBUG_DRAW
@@ -116,4 +73,50 @@ int gamedata::gameloop(QPaintEvent *event)
 	}
 
 	return 0;
+}
+
+int gamedata::gamedraw()
+{
+
+		dynamicsWorld->updateAabbs();
+		for (int j = 0; j < dynamicsWorld->getNumCollisionObjects(); j++)
+		{
+			btCollisionObject* obj = dynamicsWorld->getCollisionObjectArray()[j];
+			//update_object_graphics(obj,projection,view,reset);
+			btTransform trans = getTransform(obj);
+
+			btCollisionShape *shape = obj->getCollisionShape();
+			shapeobject *object = (shapeobject*)shape->getUserPointer();
+			{
+				//if (reset)
+				//	obj->getWorldTransform().setOrigin(object->resettrans.getOrigin());
+				object->shader->use();
+				object->update();
+
+				glm::mat4 projection = glm::perspective(glm::radians(_camera.Zoom), _camera.viewsizex / _camera.viewsizey, 0.1f, 1000.0f);
+				glm::mat4 view = _camera.GetViewMatrix();
+				glm::mat4 model = glm::mat4(1.0f);
+				model = glm::scale(model, glm::vec3(shape->getLocalScaling().getX(),
+				 									shape->getLocalScaling().getY(),
+				 									shape->getLocalScaling().getZ()));
+				model = glm::translate(model, glm::vec3(trans.getOrigin().getX() / shape->getLocalScaling().getX(),
+														trans.getOrigin().getY() / shape->getLocalScaling().getY(),
+														trans.getOrigin().getZ() / shape->getLocalScaling().getZ()));
+				model = model * glm::toMat4(glm::quat(trans.getRotation().getW(),
+													trans.getRotation().getX(),
+													trans.getRotation().getY(),
+													trans.getRotation().getZ()));
+
+				object->shader->setMat4("projection", projection);
+				object->shader->setMat4("view",view);
+				object->shader->setMat4("model",model);
+
+				glBindVertexArray(object->VAO);
+				std::cout << object->vertexcount << std::endl;
+				glDrawArrays (GL_TRIANGLES, 0, object->vertexcount);
+				
+			}
+
+			printf("world pos object %d = %f,%f,%f\n", j, float(trans.getOrigin().getX()), float(trans.getOrigin().getY()), float(trans.getOrigin().getZ()));
+		}
 }
