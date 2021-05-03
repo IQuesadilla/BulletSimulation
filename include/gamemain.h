@@ -71,7 +71,7 @@ struct gamedata
 
 	int gameinit(int argc, char **argv);
 	int gameloop(QPaintEvent *event);
-	int gamedraw();
+	//int gamedraw();
 	int gamequit(){};
 
 	eventhandler *_eventhandler;

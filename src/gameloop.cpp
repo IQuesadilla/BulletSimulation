@@ -22,9 +22,10 @@
 
 int gamedata::gameloop(QPaintEvent *event)
 {
+	std::cout << event << std::endl;
 	//while (!quit)
 	{
-		glcontext->makeCurrent();
+		//glcontext->makeCurrent();
 		dynamicsWorld->stepSimulation(1.0f / 60.0f, 10, 1.0f / 60.0f);
 
 		//_event.updateCallbacks();
@@ -56,28 +57,7 @@ int gamedata::gameloop(QPaintEvent *event)
 			object->shader->setVec3("viewPos",_camera.Position);	
 		}
 
-		//window->update();
-
-		#ifdef DO_DEBUG_DRAW
-		dynamicsWorld->debugDrawWorld();
-		//BulletDebugDrawer_OpenGL *debugDraw = ((BulletDebugDrawer_OpenGL*)dynamicsWorld->getDebugDrawer());
-		debugDraw.shader.use();
-		//glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), camera.viewsizex / camera.viewsizey, 0.1f, 1000.0f);
-		//glm::mat4 view = camera.GetViewMatrix();
-		debugDraw.SetMatrices(view,projection,glm::mat3(1.0f));
-		debugDraw.updateDraw();
-		#endif
-
-		//if (reset) reset = false;
-		//_glcontext.update();
-	}
-
-	return 0;
-}
-
-int gamedata::gamedraw()
-{
-
+		std::cout << "gamedraw" << std::endl;
 		dynamicsWorld->updateAabbs();
 		for (int j = 0; j < dynamicsWorld->getNumCollisionObjects(); j++)
 		{
@@ -95,6 +75,11 @@ int gamedata::gamedraw()
 
 				glm::mat4 projection = glm::perspective(glm::radians(_camera.Zoom), _camera.viewsizex / _camera.viewsizey, 0.1f, 1000.0f);
 				glm::mat4 view = _camera.GetViewMatrix();
+
+				object->shader->setMat4("projection", projection);
+				object->shader->setMat4("view",view);
+
+
 				glm::mat4 model = glm::mat4(1.0f);
 				model = glm::scale(model, glm::vec3(shape->getLocalScaling().getX(),
 				 									shape->getLocalScaling().getY(),
@@ -107,16 +92,37 @@ int gamedata::gamedraw()
 													trans.getRotation().getY(),
 													trans.getRotation().getZ()));
 
-				object->shader->setMat4("projection", projection);
-				object->shader->setMat4("view",view);
 				object->shader->setMat4("model",model);
+				std::cout << "pvm set" << std::endl;
 
 				glBindVertexArray(object->VAO);
 				std::cout << object->vertexcount << std::endl;
 				glDrawArrays (GL_TRIANGLES, 0, object->vertexcount);
-				
 			}
 
-			printf("world pos object %d = %f,%f,%f\n", j, float(trans.getOrigin().getX()), float(trans.getOrigin().getY()), float(trans.getOrigin().getZ()));
+			//printf("world pos object %d = %f,%f,%f\n", j, float(trans.getOrigin().getX()), float(trans.getOrigin().getY()), float(trans.getOrigin().getZ()));
 		}
+
+		//window->update();
+/*
+		#ifdef DO_DEBUG_DRAW
+		dynamicsWorld->debugDrawWorld();
+		//BulletDebugDrawer_OpenGL *debugDraw = ((BulletDebugDrawer_OpenGL*)dynamicsWorld->getDebugDrawer());
+		debugDraw.shader.use();
+		//glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), camera.viewsizex / camera.viewsizey, 0.1f, 1000.0f);
+		//glm::mat4 view = camera.GetViewMatrix();
+		debugDraw.SetMatrices(view,projection,glm::mat3(1.0f));
+		debugDraw.updateDraw();
+		#endif
+*/
+		//if (reset) reset = false;
+		//_glcontext.update();
+	}
+
+//	return 0;
+//}
+
+//int gamedata::gamedraw()
+//{
+std::cout << "heree" << std::endl;
 }

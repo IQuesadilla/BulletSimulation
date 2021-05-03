@@ -1275,55 +1275,6 @@ gameinit.o: src/gameinit.cpp include/gamemain.h \
 		vcpkg/installed/x64-linux/include/glm/ext/matrix_transform.inl \
 		vcpkg/installed/x64-linux/include/glm/gtc/matrix_transform.inl \
 		include/class/eventhandler.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_events.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_stdinc.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_config.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_platform.h \
-		vcpkg/installed/x64-linux/include/SDL2/begin_code.h \
-		vcpkg/installed/x64-linux/include/SDL2/close_code.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_error.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_video.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_pixels.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_endian.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_rect.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_rwops.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_surface.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_blendmode.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_keyboard.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_keycode.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_scancode.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_mouse.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_joystick.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_gamecontroller.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_sensor.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_quit.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_gesture.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_touch.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_log.h \
-		class/sdlwrapper/event.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_main.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_assert.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_atomic.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_audio.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_mutex.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_thread.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_clipboard.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_cpuinfo.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_filesystem.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_haptic.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_hints.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_loadso.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_messagebox.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_metal.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_power.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_render.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_shape.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_system.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_timer.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_version.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_locale.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_misc.h \
 		include/class/object.h \
 		vcpkg/installed/x64-linux/include/bullet/btBulletDynamicsCommon.h \
 		vcpkg/installed/x64-linux/include/bullet/btBulletCollisionCommon.h \
@@ -1471,12 +1422,7 @@ gameinit.o: src/gameinit.cpp include/gamemain.h \
 		vcpkg/installed/x64-linux/include/glm/gtx/norm.inl \
 		vcpkg/installed/x64-linux/include/glm/gtx/quaternion.inl \
 		class/shader/shader.h \
-		class/daeload/daeload.h \
-		class/datatypes/datatypes.h \
-		vcpkg/installed/x64-linux/include/bullet/BulletCollision/btBulletCollisionCommon.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gameinit.o src/gameinit.cpp
-
-gameloop.o: src/gameloop.cpp vcpkg/installed/x64-linux/include/SDL2/SDL.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL.h \
 		vcpkg/installed/x64-linux/include/SDL2/SDL_main.h \
 		vcpkg/installed/x64-linux/include/SDL2/SDL_stdinc.h \
 		vcpkg/installed/x64-linux/include/SDL2/SDL_config.h \
@@ -1524,7 +1470,12 @@ gameloop.o: src/gameloop.cpp vcpkg/installed/x64-linux/include/SDL2/SDL.h \
 		vcpkg/installed/x64-linux/include/SDL2/SDL_version.h \
 		vcpkg/installed/x64-linux/include/SDL2/SDL_locale.h \
 		vcpkg/installed/x64-linux/include/SDL2/SDL_misc.h \
-		vcpkg/installed/x64-linux/include/glm/gtc/quaternion.hpp \
+		class/daeload/daeload.h \
+		class/datatypes/datatypes.h \
+		vcpkg/installed/x64-linux/include/bullet/BulletCollision/btBulletCollisionCommon.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gameinit.o src/gameinit.cpp
+
+gameloop.o: src/gameloop.cpp vcpkg/installed/x64-linux/include/glm/gtc/quaternion.hpp \
 		vcpkg/installed/x64-linux/include/glm/gtc/constants.hpp \
 		vcpkg/installed/x64-linux/include/glm/ext/scalar_constants.hpp \
 		vcpkg/installed/x64-linux/include/glm/detail/setup.hpp \
@@ -1823,7 +1774,6 @@ gameloop.o: src/gameloop.cpp vcpkg/installed/x64-linux/include/SDL2/SDL.h \
 		include/gamemain.h \
 		class/camera/camera.h \
 		include/class/eventhandler.h \
-		class/sdlwrapper/event.h \
 		include/class/object.h \
 		vcpkg/installed/x64-linux/include/tiny_obj_loader.h \
 		vcpkg/installed/x64-linux/include/bullet/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h \
@@ -1838,12 +1788,61 @@ gameloop.o: src/gameloop.cpp vcpkg/installed/x64-linux/include/SDL2/SDL.h \
 		vcpkg/installed/x64-linux/include/json/writer.h \
 		vcpkg/installed/x64-linux/include/tinyxml2.h \
 		class/shader/shader.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_main.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_stdinc.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_config.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_platform.h \
+		vcpkg/installed/x64-linux/include/SDL2/begin_code.h \
+		vcpkg/installed/x64-linux/include/SDL2/close_code.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_assert.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_atomic.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_audio.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_error.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_endian.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_mutex.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_thread.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_rwops.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_clipboard.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_cpuinfo.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_events.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_video.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_pixels.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_rect.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_surface.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_blendmode.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_keyboard.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_keycode.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_scancode.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_mouse.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_joystick.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_gamecontroller.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_sensor.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_quit.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_gesture.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_touch.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_filesystem.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_haptic.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_hints.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_loadso.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_log.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_messagebox.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_metal.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_power.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_render.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_shape.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_system.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_timer.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_version.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_locale.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_misc.h \
 		class/daeload/daeload.h \
 		class/datatypes/datatypes.h \
 		vcpkg/installed/x64-linux/include/bullet/BulletCollision/btBulletCollisionCommon.h \
 		class/sdlwrapper/window.h \
 		class/sdlwrapper/renderer.h \
 		class/sdlwrapper/glcontext.h \
+		class/sdlwrapper/event.h \
 		include/class/debug.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gameloop.o src/gameloop.cpp
 
@@ -2013,55 +2012,6 @@ gamemain.o: src/gamemain.cpp include/gamemain.h \
 		vcpkg/installed/x64-linux/include/glm/ext/matrix_transform.inl \
 		vcpkg/installed/x64-linux/include/glm/gtc/matrix_transform.inl \
 		include/class/eventhandler.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_events.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_stdinc.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_config.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_platform.h \
-		vcpkg/installed/x64-linux/include/SDL2/begin_code.h \
-		vcpkg/installed/x64-linux/include/SDL2/close_code.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_error.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_video.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_pixels.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_endian.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_rect.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_rwops.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_surface.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_blendmode.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_keyboard.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_keycode.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_scancode.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_mouse.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_joystick.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_gamecontroller.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_sensor.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_quit.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_gesture.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_touch.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_log.h \
-		class/sdlwrapper/event.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_main.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_assert.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_atomic.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_audio.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_mutex.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_thread.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_clipboard.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_cpuinfo.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_filesystem.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_haptic.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_hints.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_loadso.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_messagebox.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_metal.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_power.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_render.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_shape.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_system.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_timer.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_version.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_locale.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_misc.h \
 		include/class/object.h \
 		vcpkg/installed/x64-linux/include/bullet/btBulletDynamicsCommon.h \
 		vcpkg/installed/x64-linux/include/bullet/btBulletCollisionCommon.h \
@@ -2209,6 +2159,54 @@ gamemain.o: src/gamemain.cpp include/gamemain.h \
 		vcpkg/installed/x64-linux/include/glm/gtx/norm.inl \
 		vcpkg/installed/x64-linux/include/glm/gtx/quaternion.inl \
 		class/shader/shader.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_main.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_stdinc.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_config.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_platform.h \
+		vcpkg/installed/x64-linux/include/SDL2/begin_code.h \
+		vcpkg/installed/x64-linux/include/SDL2/close_code.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_assert.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_atomic.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_audio.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_error.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_endian.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_mutex.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_thread.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_rwops.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_clipboard.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_cpuinfo.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_events.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_video.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_pixels.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_rect.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_surface.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_blendmode.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_keyboard.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_keycode.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_scancode.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_mouse.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_joystick.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_gamecontroller.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_sensor.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_quit.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_gesture.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_touch.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_filesystem.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_haptic.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_hints.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_loadso.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_log.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_messagebox.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_metal.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_power.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_render.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_shape.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_system.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_timer.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_version.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_locale.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_misc.h \
 		class/daeload/daeload.h \
 		class/datatypes/datatypes.h \
 		vcpkg/installed/x64-linux/include/bullet/BulletCollision/btBulletCollisionCommon.h
@@ -3848,31 +3846,6 @@ debug.o: src/class/debug.cpp include/class/debug.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug.o src/class/debug.cpp
 
 eventhandler.o: src/class/eventhandler.cpp include/class/eventhandler.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_events.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_stdinc.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_config.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_platform.h \
-		vcpkg/installed/x64-linux/include/SDL2/begin_code.h \
-		vcpkg/installed/x64-linux/include/SDL2/close_code.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_error.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_video.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_pixels.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_endian.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_rect.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_rwops.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_surface.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_blendmode.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_keyboard.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_keycode.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_scancode.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_mouse.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_joystick.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_gamecontroller.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_sensor.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_quit.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_gesture.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_touch.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_log.h \
 		class/camera/camera.h \
 		vcpkg/installed/x64-linux/include/glm/glm.hpp \
 		vcpkg/installed/x64-linux/include/glm/detail/_fixes.hpp \
@@ -4037,30 +4010,6 @@ eventhandler.o: src/class/eventhandler.cpp include/class/eventhandler.h \
 		vcpkg/installed/x64-linux/include/glm/ext/matrix_transform.hpp \
 		vcpkg/installed/x64-linux/include/glm/ext/matrix_transform.inl \
 		vcpkg/installed/x64-linux/include/glm/gtc/matrix_transform.inl \
-		class/sdlwrapper/event.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_main.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_assert.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_atomic.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_audio.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_mutex.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_thread.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_clipboard.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_cpuinfo.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_filesystem.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_haptic.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_hints.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_loadso.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_messagebox.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_metal.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_power.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_render.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_shape.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_system.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_timer.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_version.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_locale.h \
-		vcpkg/installed/x64-linux/include/SDL2/SDL_misc.h \
 		include/gamemain.h \
 		include/class/object.h \
 		vcpkg/installed/x64-linux/include/bullet/btBulletDynamicsCommon.h \
@@ -4209,6 +4158,54 @@ eventhandler.o: src/class/eventhandler.cpp include/class/eventhandler.h \
 		vcpkg/installed/x64-linux/include/glm/gtx/norm.inl \
 		vcpkg/installed/x64-linux/include/glm/gtx/quaternion.inl \
 		class/shader/shader.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_main.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_stdinc.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_config.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_platform.h \
+		vcpkg/installed/x64-linux/include/SDL2/begin_code.h \
+		vcpkg/installed/x64-linux/include/SDL2/close_code.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_assert.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_atomic.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_audio.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_error.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_endian.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_mutex.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_thread.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_rwops.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_clipboard.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_cpuinfo.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_events.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_video.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_pixels.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_rect.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_surface.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_blendmode.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_keyboard.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_keycode.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_scancode.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_mouse.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_joystick.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_gamecontroller.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_sensor.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_quit.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_gesture.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_touch.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_filesystem.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_haptic.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_hints.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_loadso.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_log.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_messagebox.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_metal.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_power.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_render.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_shape.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_system.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_timer.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_version.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_locale.h \
+		vcpkg/installed/x64-linux/include/SDL2/SDL_misc.h \
 		class/daeload/daeload.h \
 		class/datatypes/datatypes.h \
 		vcpkg/installed/x64-linux/include/bullet/BulletCollision/btBulletCollisionCommon.h

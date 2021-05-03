@@ -39,8 +39,10 @@ GLWidget::GLWidget(gamedata *_gamedataptr)
 
 void GLWidget::paintEvent(QPaintEvent *event)
 {
+	std::cout << "paintEvent" << std::endl;
 	_gamedata->gameloop(event);
-	_gamedata->gamedraw();
+	std::cout << "here" << std::endl;
+	//_gamedata->gamedraw();
 }
 
 void GLWidget::initializeGL()
