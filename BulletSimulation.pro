@@ -707,10 +707,6 @@ SOURCES += src/gameinit.cpp \
            class/camera/camera.cpp \
            class/daeload/daeload.cpp \
            class/datatypes/datatypes.cpp \
-           class/sdlwrapper/event.cpp \
-           class/sdlwrapper/glcontext.cpp \
-           class/sdlwrapper/renderer.cpp \
-           class/sdlwrapper/window.cpp \
            class/shader/shader.cpp \
            src/class/debug.cpp \
            src/class/eventhandler.cpp \
