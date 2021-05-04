@@ -7,17 +7,17 @@ void WindowWidget::setGLContextM(QWidget *glcontext)
 
 void WindowWidget::keyPressEvent(QKeyEvent *event)
 {
-	_eventhandler->keyboardEvent(event,true);
+	_gamedata->_eventhandler->keyboardEvent(event,true);
 }
 
 void WindowWidget::keyReleaseEvent(QKeyEvent *event)
 {
-	_eventhandler->keyboardEvent(event,false);
+	_gamedata->_eventhandler->keyboardEvent(event,false);
 }
 
 void WindowWidget::mouseMoveEvent(QMouseEvent *event)
 {
-	_eventhandler->mouseEvent(event);
+	_gamedata->_eventhandler->mouseEvent(event);
 }
 
 void WindowWidget::mousePressEvent(QMouseEvent *event)
@@ -41,8 +41,7 @@ void GLWidget::paintEvent(QPaintEvent *event)
 {
 	std::cout << "paintEvent" << std::endl;
 	_gamedata->gameloop(event);
-	std::cout << "here" << std::endl;
-	//_gamedata->gamedraw();
+	_gamedata->gamedraw();
 }
 
 void GLWidget::initializeGL()
@@ -55,7 +54,7 @@ void GLWidget::initializeGL()
 
 void GLWidget::paintGL()
 {
-
+	std::cout << "paintGL" << std::endl;
 }
 
 void GLWidget::resizeGL(int w, int h)

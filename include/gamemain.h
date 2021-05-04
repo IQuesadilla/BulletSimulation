@@ -38,7 +38,7 @@ public:
 	};
     void setGLContextM(QWidget *glcontext);
 
-	eventhandler *_eventhandler;
+	gamedata *_gamedata;
 
 protected:
     void keyPressEvent(QKeyEvent *event) override;
@@ -71,8 +71,8 @@ struct gamedata
 
 	int gameinit(int argc, char **argv);
 	int gameloop(QPaintEvent *event);
-	//int gamedraw();
-	int gamequit(){};
+	int gamedraw();
+	int gamequit(){return 0;};
 
 	eventhandler *_eventhandler;
 	Camera _camera;
@@ -80,6 +80,8 @@ struct gamedata
 	QApplication *app;
 	WindowWidget *window;
 	GLWidget *glcontext;
+
+	QLineEdit *textbox;
 
 	btDefaultCollisionConfiguration *collisionConfiguration;
 	btCollisionDispatcher *dispatcher;
@@ -93,8 +95,4 @@ struct gamedata
 	bool firstMouse = true;
 	int lastX, lastY;
 	bool quit = false;
-
-	//float deltaTime, lastFrame;
-	//bool reset = false;
-	//int fps, lastsec, fc;
 };
