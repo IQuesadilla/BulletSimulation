@@ -68,9 +68,9 @@ std::vector<btScalar> loadObjFile(std::string path, std::string mtlpath)
 	success = tinyobj::LoadObj(&attrib, &shapes, &materials, &warn, &err, path.c_str(), mtlpath.c_str());
 
 	if (!warn.empty())
-		SDL_LogWarn(SDL_LOG_CATEGORY_VIDEO,"%s",warn.c_str());
+		printf("%s\n",warn.c_str());
 	if (!err.empty())
-		SDL_LogError(SDL_LOG_CATEGORY_VIDEO,"%s",warn.c_str());
+		printf("%s\n",warn.c_str());
 	if (!success) std::cout << path << std::endl;
 
 	std::cout << shapes.size() << ' ' << materials.size() << std::endl;
