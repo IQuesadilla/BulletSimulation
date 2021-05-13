@@ -12,7 +12,7 @@ cd vcpkg
 
 cd ..
 mkdir deps
-cp -r vcpkg/installed/x64-linux/ deps/
+cp -r vcpkg/installed/x64-linux/* deps/
 rm -rf vcpkg
 
 git submodule init
