@@ -11,5 +11,8 @@ cd vcpkg
 ./vcpkg install tinyobjloader
 
 cd ..
+git submodule init
+git submodule update
+
 qmake
 make
