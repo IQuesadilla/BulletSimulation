@@ -32,7 +32,7 @@ public:
 	{
 		setLayout(&mainLayout);
 
-		setWindowTitle("small penis");
+		setWindowTitle("test");
 		resize(WINDOW_WIDTH, WINDOW_HEIGHT);
 		show();
 	};

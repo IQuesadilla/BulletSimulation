@@ -76,8 +76,8 @@ int gamedata::gameinit(int argc, char **argv)
 	glcontext = new GLWidget(this);
 	_eventhandler = new eventhandler(this);
 	textbox = new QLineEdit();
-	window->setGLContextM(textbox);
-	textbox->setGeometry(QRect(QPoint(100, 100), QSize(200, 50)));
+	//window->setGLContextM(textbox);
+	//textbox->setGeometry(QRect(QPoint(100, 100), QSize(200, 50)));
 	window->setGLContextM(glcontext);
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LESS);
