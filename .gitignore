@@ -6,4 +6,4 @@ vcpkg
 obj/*
 Makefile
 BulletSimulation
-deps/*
+deps
