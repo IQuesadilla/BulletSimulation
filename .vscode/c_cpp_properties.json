@@ -4,11 +4,11 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/vcpkg/installed/x64-linux/include",
-                "${workspaceFolder}/vcpkg/installed/x64-linux/include/*",
+                "${workspaceFolder}/deps/include",
+                "${workspaceFolder}/deps/include/*",
                 "${workspaceFolder}/include",
-				"${workspaceFolder}/class",
-                "/usr/include/SDL2"
+                "${workspaceFolder}/class",
+				"/usr/include/x86_64-linux-gnu/qt5"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

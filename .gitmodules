@@ -7,9 +7,6 @@
 [submodule "class/shader"]
 	path = class/shader
 	url = https://github.com/IQuesadilla/shader.git
-[submodule "class/sdlwrapper"]
-	path = class/sdlwrapper
-	url = https://github.com/IQuesadilla/sdlwrapper.git
 [submodule "class/datatypes"]
 	path = class/datatypes
 	url = https://github.com/IQuesadilla/datatypes.git

@@ -2,3 +2,8 @@ main
 class/*
 vcpkg
 .vscode/*.log
+*.o
+obj/*
+Makefile
+BulletSimulation
+deps/*

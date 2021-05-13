@@ -3,36 +3,94 @@
 #define GL_GLEXT_PROTOTYPES
 #define GLM_ENABLE_EXPERIMENTAL
 
-#include "gameinit.h"
-#include "gameloop.h"
-
-#include "sdlwrapper/window.h"
-#include "sdlwrapper/glcontext.h"
-#include "sdlwrapper/event.h"
 #include "camera/camera.h"
+
+#include "class/eventhandler.h"
+#include "class/object.h"
 
 #include "bullet/BulletCollision/btBulletCollisionCommon.h"
 #include "bullet/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h"
 #include "bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h"
 
+#include <QtCore/QtCore>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QtWidgets>
+#include <QtCore/QTextStream>
+#include <QtOpenGL/QGL>
+#include <iostream>
+
 #define WINDOW_WIDTH 640
 #define WINDOW_HEIGHT 480
 
+struct eventhandler;
+struct gamedata;
+
+class WindowWidget : public QWidget
+{
+public:
+    explicit WindowWidget(QWidget *parent = 0):QWidget(parent)
+	{
+		setLayout(&mainLayout);
+
+		setWindowTitle("test");
+		resize(WINDOW_WIDTH, WINDOW_HEIGHT);
+		show();
+	};
+    void setGLContextM(QWidget *glcontext);
+
+	gamedata *_gamedata;
+
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+	void keyReleaseEvent(QKeyEvent *event) override;
+	void mouseMoveEvent(QMouseEvent *event) override;
+	void mousePressEvent(QMouseEvent *event) override;
+	void mouseReleaseEvent(QMouseEvent *event) override;
+
+    QHBoxLayout mainLayout;
+};
+
+class GLWidget : public QOpenGLWidget, protected QOpenGLFunctions
+{
+public:
+    GLWidget(gamedata *_gamedataptr);
+
+	gamedata *_gamedata;
+
+protected:
+    void paintEvent(QPaintEvent *event) override;
+    void initializeGL() override;
+    void paintGL() override;
+	void resizeGL(int w, int h) override;
+};
+
 struct gamedata
 {
-	gamedata(int argc, char **argv);
+	gamedata(int argc, char **argv){gameinit(argc,argv);};
 	~gamedata();
 
-	window _window;
-	glcontext _glcontext;
-	event _event;
+	int gameinit(int argc, char **argv);
+	int gameloop(QPaintEvent *event);
+	int gamedraw();
+	int gamequit(){return 0;};
+
+	eventhandler *_eventhandler;
 	Camera _camera;
+
+	QApplication *app;
+	WindowWidget *window;
+	GLWidget *glcontext;
+
+	QLineEdit *textbox;
 
 	btDefaultCollisionConfiguration *collisionConfiguration;
 	btCollisionDispatcher *dispatcher;
 	btBroadphaseInterface *overlappingPairCache;
 	btSequentialImpulseConstraintSolver *solver;
 	btDiscreteDynamicsWorld *dynamicsWorld;
+
+	std::chrono::_V2::system_clock::time_point start;
+	std::chrono::high_resolution_clock timer;
 
 	bool firstMouse = true;
 	int lastX, lastY;
