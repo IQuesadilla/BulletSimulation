@@ -1,5 +1,14 @@
 #include "gamemain.h"
 
+WindowWidget::WindowWidget()
+{
+	setLayout(&mainLayout);
+
+	setWindowTitle("test");
+	resize(WINDOW_WIDTH, WINDOW_HEIGHT);
+	show();
+};
+
 void WindowWidget::setGLContextM(QWidget *glcontext)
 {
 	mainLayout.addWidget(glcontext);
@@ -33,17 +42,18 @@ void WindowWidget::mouseReleaseEvent(QMouseEvent *event)
 GLWidget::GLWidget(gamedata *_gamedataptr)
 {
 	_gamedata = _gamedataptr;
+	//initializeGL();
 
 	//paintGL();
 }
-
+/*
 void GLWidget::paintEvent(QPaintEvent *event)
 {
 	std::cout << "paintEvent" << std::endl;
 	_gamedata->gameloop(event);
 	_gamedata->gamedraw();
 }
-
+*/
 void GLWidget::initializeGL()
 {
 	initializeOpenGLFunctions();
@@ -55,6 +65,8 @@ void GLWidget::initializeGL()
 void GLWidget::paintGL()
 {
 	std::cout << "paintGL" << std::endl;
+	_gamedata->gameloop();
+	_gamedata->gamedraw();
 }
 
 void GLWidget::resizeGL(int w, int h)

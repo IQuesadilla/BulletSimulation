@@ -83,6 +83,8 @@ int gamedata::gameinit(int argc, char **argv)
     glDepthFunc(GL_LESS);
 	glEnable(GL_PROGRAM_POINT_SIZE);
 
+	glClearColor (1.0f,0.0f,0.0f,1.0f);
+
 	window->_gamedata = this;
 
 	#ifdef DO_DEBUG_DRAW

@@ -20,9 +20,9 @@
 
 //#define DO_DEBUG_DRAW btIDebugDraw::DebugDrawModes::DBG_DrawAabb | btIDebugDraw::DebugDrawModes::DBG_DrawWireframe
 
-int gamedata::gameloop(QPaintEvent *event)
+int gamedata::gameloop()
 {
-	std::cout << event << std::endl;
+	//std::cout << event << std::endl;
 	//glcontext->makeCurrent();
 	dynamicsWorld->stepSimulation(1.0f / 60.0f, 10, 1.0f / 60.0f);
 

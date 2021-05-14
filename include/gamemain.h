@@ -28,14 +28,7 @@ struct gamedata;
 class WindowWidget : public QWidget
 {
 public:
-    explicit WindowWidget(QWidget *parent = 0):QWidget(parent)
-	{
-		setLayout(&mainLayout);
-
-		setWindowTitle("test");
-		resize(WINDOW_WIDTH, WINDOW_HEIGHT);
-		show();
-	};
+    WindowWidget();
     void setGLContextM(QWidget *glcontext);
 
 	gamedata *_gamedata;
@@ -58,7 +51,7 @@ public:
 	gamedata *_gamedata;
 
 protected:
-    void paintEvent(QPaintEvent *event) override;
+    //void paintEvent(QPaintEvent *event) override;
     void initializeGL() override;
     void paintGL() override;
 	void resizeGL(int w, int h) override;
@@ -70,7 +63,7 @@ struct gamedata
 	~gamedata();
 
 	int gameinit(int argc, char **argv);
-	int gameloop(QPaintEvent *event);
+	int gameloop();
 	int gamedraw();
 	int gamequit(){return 0;};
 
